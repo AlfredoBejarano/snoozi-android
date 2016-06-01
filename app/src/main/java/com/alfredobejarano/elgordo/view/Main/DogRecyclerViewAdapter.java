@@ -17,32 +17,21 @@ import java.util.List;
 
 /**
  * Created by jacorona on 6/1/16.
+ * <p/>
+ * DogRecyclerViewAdapter
+ * This class fuctions as an adapter to a RecycleView,
+ * it defines a Layout and also sets how to fill it with data received from the presenter.
  */
 public class DogRecyclerViewAdapter extends RecyclerView.Adapter<DogRecyclerViewAdapter.ViewHolder> {
     private List<Dog> dogs;
 
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView breedAndColor;
-        public TextView locationAndDate;
-        public DraweeView image;
-        public ViewHolder(View v) {
-            super(v);
-            this.image = (DraweeView) v.findViewById(R.id.dogImage);
-            this.breedAndColor = (TextView) v.findViewById(R.id.BreedAndColor);
-            this.locationAndDate = (TextView) v.findViewById(R.id.DogLocation);
-        }
-    }
-
-    // Provide a suitable constructor (depends on the kind of dataset)
     public DogRecyclerViewAdapter(List<Dog> dogs) {
         this.dogs = dogs;
     }
 
     @Override
-    public DogRecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                                int viewType) {
-        // create a new view
+    public DogRecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.dog_card_layout, parent, false);
 
@@ -50,19 +39,32 @@ public class DogRecyclerViewAdapter extends RecyclerView.Adapter<DogRecyclerView
         return vh;
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         String title = dogs.get(position).getBreed() + " " + dogs.get(position).getColor();
         String text = dogs.get(position).getFound_location() + ", " + dogs.get(position).getFound_date();
+        Uri imageUri = Uri.parse(NetworkUtils.API_BASE_URL + dogs.get(position).getThumb_url());
+
         holder.breedAndColor.setText(title);
         holder.locationAndDate.setText(text);
-        holder.image.setImageURI(Uri.parse(NetworkUtils.API_BASE_URL + dogs.get(position).getThumb_url()));
+        holder.image.setImageURI(imageUri);
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
         return dogs.size();
+    }
+
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        public TextView breedAndColor;
+        public TextView locationAndDate;
+        public DraweeView image;
+
+        public ViewHolder(View v) {
+            super(v);
+            this.image = (DraweeView) v.findViewById(R.id.dogImage);
+            this.breedAndColor = (TextView) v.findViewById(R.id.BreedAndColor);
+            this.locationAndDate = (TextView) v.findViewById(R.id.DogLocation);
+        }
     }
 }

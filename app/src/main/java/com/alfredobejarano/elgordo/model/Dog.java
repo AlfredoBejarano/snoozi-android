@@ -71,42 +71,107 @@ public class Dog {
         this.downloadedImage = downloadedImage;
     }
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public int getId() {
+        return id;
+    }
 
-    public String getBreed() { return breed; }
-    public void setBreed(String breed) { this.breed = breed; }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public String getColor() { return color; }
-    public void setColor(String color) { this.color = color; }
+    public String getBreed() {
+        return breed;
+    }
 
-    public boolean isGender() { return gender; }
-    public void setGender(boolean gender) { this.gender = gender; }
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
 
-    public String getFound_location() { return found_location; }
-    public void setFound_location(String found_location) { this.found_location = found_location; }
+    public String getColor() {
+        return color;
+    }
 
-    public String getFound_date() { return found_date; }
-    public void setFound_date(String found_date) { this.found_date = found_date; }
+    public void setColor(String color) {
+        this.color = color;
+    }
 
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
+    public boolean isGender() {
+        return gender;
+    }
 
-    public String getCreated_at() { return created_at; }
-    public void setCreated_at(String created_at) { this.created_at = created_at; }
+    public void setGender(boolean gender) {
+        this.gender = gender;
+    }
 
-    public String getThumb_url() { return thumb_url; }
-    public void setThumb_url(String thumb_url) { this.thumb_url = thumb_url; }
+    public String getFound_location() {
+        return found_location;
+    }
 
-    public Long getNumber() { return number; }
-    public void setNumber(Long number) { this.number = number; }
+    public void setFound_location(String found_location) {
+        this.found_location = found_location;
+    }
 
-    public String getImage_url() { return image_url; }
-    public void setImage_url(String image_url) { this.image_url = image_url; }
+    public String getFound_date() {
+        return found_date;
+    }
 
-    public String getImage() { return image; }
-    public void setImage(String image) { this.image = image; }
+    public void setFound_date(String found_date) {
+        this.found_date = found_date;
+    }
 
-    public Bitmap getDownloadedImage() { return downloadedImage; }
-    public void setDownloadedImage(Bitmap downloadedImage) { this.downloadedImage = downloadedImage; }
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(String created_at) {
+        this.created_at = created_at;
+    }
+
+    public String getThumb_url() {
+        return thumb_url;
+    }
+
+    public void setThumb_url(String thumb_url) {
+        this.thumb_url = thumb_url;
+    }
+
+    public Long getNumber() {
+        return number;
+    }
+
+    public void setNumber(Long number) {
+        this.number = number;
+    }
+
+    public String getImage_url() {
+        return image_url;
+    }
+
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public Bitmap getDownloadedImage() {
+        return downloadedImage;
+    }
+
+    public void setDownloadedImage(Bitmap downloadedImage) {
+        this.downloadedImage = downloadedImage;
+    }
 }
