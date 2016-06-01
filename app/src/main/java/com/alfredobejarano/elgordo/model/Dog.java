@@ -1,5 +1,7 @@
 package com.alfredobejarano.elgordo.model;
 
+import android.graphics.Bitmap;
+
 /**
  * Created by jacorona on 6/1/16.
  */
@@ -16,6 +18,7 @@ public class Dog {
     private String thumb_url;
     private String image_url;
     private String image;
+    private Bitmap downloadedImage;
 
     /* For 'get all dogs' use */
     public Dog(int id, String breed, String color, boolean gender, String found_location, String found_date, String description, String created_at, String thumb_url) {
@@ -56,6 +59,18 @@ public class Dog {
         this.image = image;
     }
 
+    /* For 'display a dog' use */
+    public Dog(String breed, String color, boolean gender, String found_location, String found_date, String description, Long number, Bitmap downloadedImage) {
+        this.breed = breed;
+        this.color = color;
+        this.gender = gender;
+        this.found_location = found_location;
+        this.found_date = found_date;
+        this.description = description;
+        this.number = number;
+        this.downloadedImage = downloadedImage;
+    }
+
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
@@ -91,4 +106,7 @@ public class Dog {
 
     public String getImage() { return image; }
     public void setImage(String image) { this.image = image; }
+
+    public Bitmap getDownloadedImage() { return downloadedImage; }
+    public void setDownloadedImage(Bitmap downloadedImage) { this.downloadedImage = downloadedImage; }
 }

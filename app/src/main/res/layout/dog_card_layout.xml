@@ -1,0 +1,38 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="4dp">
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <RelativeLayout
+            android:id="@+id/DogImageAndBreed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/dogImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+            <TextView
+                style="@style/DogCardTitle"
+                android:id="@+id/BreedAndColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <TextView
+            style="@style/DogCardText"
+            android:id="@+id/DogLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DogImageAndBreed"
+            android:padding="@dimen/activity_horizontal_margin"/>
+        <View
+            android:background="#ccc"
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:layout_below="@id/DogLocation" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
