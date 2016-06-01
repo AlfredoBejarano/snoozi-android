@@ -11,9 +11,13 @@ public class Dog {
     private String found_location;
     private String found_date;
     private String description;
+    private Long number;
     private String created_at;
     private String thumb_url;
+    private String image_url;
+    private String image;
 
+    /* For 'get all dogs' use */
     public Dog(int id, String breed, String color, boolean gender, String found_location, String found_date, String description, String created_at, String thumb_url) {
         this.id = id;
         this.breed = breed;
@@ -24,6 +28,32 @@ public class Dog {
         this.description = description;
         this.created_at = created_at;
         this.thumb_url = thumb_url;
+    }
+
+    /* For 'get a single dog' use */
+    public Dog(int id, String breed, String color, boolean gender, String found_location, String found_date, String description, Long number, String created_at, String image_url) {
+        this.id = id;
+        this.breed = breed;
+        this.color = color;
+        this.gender = gender;
+        this.found_location = found_location;
+        this.found_date = found_date;
+        this.description = description;
+        this.number = number;
+        this.created_at = created_at;
+        this.image_url = image_url;
+    }
+
+    /* For 'create a dog' use */
+    public Dog(String breed, String color, boolean gender, String found_location, String found_date, String description, Long number, String image) {
+        this.breed = breed;
+        this.color = color;
+        this.gender = gender;
+        this.found_location = found_location;
+        this.found_date = found_date;
+        this.description = description;
+        this.number = number;
+        this.image = image;
     }
 
     public int getId() { return id; }
@@ -52,4 +82,13 @@ public class Dog {
 
     public String getThumb_url() { return thumb_url; }
     public void setThumb_url(String thumb_url) { this.thumb_url = thumb_url; }
+
+    public Long getNumber() { return number; }
+    public void setNumber(Long number) { this.number = number; }
+
+    public String getImage_url() { return image_url; }
+    public void setImage_url(String image_url) { this.image_url = image_url; }
+
+    public String getImage() { return image; }
+    public void setImage(String image) { this.image = image; }
 }
