@@ -42,3 +42,8 @@ captures/
 #Mac and Windows files
 .Ds_Store
 thumbs.db
+app/libs/
+app/src/main/java/com/alfredobejarano/elgordo/network/
+app/src/main/java/com/alfredobejarano/elgordo/presenter/
+app/src/main/res/drawable/
+app/src/main/res/values-v21/
