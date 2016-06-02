@@ -24,10 +24,11 @@ import java.util.List;
  */
 public class DogRecyclerViewAdapter extends RecyclerView.Adapter<DogRecyclerViewAdapter.ViewHolder> {
     private List<Dog> dogs;
+    private MainActivity mainActivity;
 
-
-    public DogRecyclerViewAdapter(List<Dog> dogs) {
+    public DogRecyclerViewAdapter(List<Dog> dogs, MainActivity mainActivity) {
         this.dogs = dogs;
+        this.mainActivity = mainActivity;
     }
 
     @Override
@@ -35,7 +36,8 @@ public class DogRecyclerViewAdapter extends RecyclerView.Adapter<DogRecyclerView
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.dog_card_layout, parent, false);
 
-        ViewHolder vh = new ViewHolder((CardView) v);
+
+        ViewHolder vh = new ViewHolder((CardView) v, dogs, mainActivity);
         return vh;
     }
 
@@ -60,8 +62,15 @@ public class DogRecyclerViewAdapter extends RecyclerView.Adapter<DogRecyclerView
         public TextView locationAndDate;
         public DraweeView image;
 
-        public ViewHolder(View v) {
+        public ViewHolder(View v, final List<Dog> dogs, final MainActivity mainActivity) {
             super(v);
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int dogId = dogs.get(getAdapterPosition()).getId();
+                    mainActivity.openDogActivity(dogId);
+                }
+            });
             this.image = (DraweeView) v.findViewById(R.id.dogImage);
             this.breedAndColor = (TextView) v.findViewById(R.id.BreedAndColor);
             this.locationAndDate = (TextView) v.findViewById(R.id.DogLocation);

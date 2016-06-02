@@ -31,8 +31,12 @@ public class MainActivity extends AppCompatActivity implements View {
         getSupportActionBar().hide(); // Hides ActionBar
 
         /* RecyclerView configurations */
-        RecyclerView dogRecyclerView = (RecyclerView) findViewById(R.id.DogsRecyclerView);
+        final RecyclerView dogRecyclerView = (RecyclerView) findViewById(R.id.DogsRecyclerView);
         dogRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        dogRecyclerView.setAdapter(new DogRecyclerViewAdapter((List<Dog>) data));
+        dogRecyclerView.setAdapter(new DogRecyclerViewAdapter(((List<Dog>) data),this));
+    }
+
+    public void openDogActivity(int dogId) {
+        /* Go to show dog activity */
     }
 }

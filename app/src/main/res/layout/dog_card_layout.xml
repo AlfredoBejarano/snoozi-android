@@ -1,8 +1,10 @@
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardUseCompatPadding="true"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingBottom="4dp">
+    android:layout_marginBottom="2dp" >
 
     <RelativeLayout
         android:layout_height="wrap_content"
@@ -29,10 +31,5 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/DogImageAndBreed"
             android:padding="@dimen/activity_horizontal_margin"/>
-        <View
-            android:background="#ccc"
-            android:layout_height="1dp"
-            android:layout_width="match_parent"
-            android:layout_below="@id/DogLocation" />
     </RelativeLayout>
 </android.support.v7.widget.CardView>
