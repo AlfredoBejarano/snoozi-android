@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ViewDogPageTextSecondary" parent="ViewDogPageText">
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/textSecondary</item>
+    </style>
+</resources>

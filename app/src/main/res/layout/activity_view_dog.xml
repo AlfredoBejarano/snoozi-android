@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.alfredobejarano.elgordo.view.ViewDog.ViewDogActivity">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            style="@style/DogPhoto"
+            android:id="@+id/view_dog_photo"
+            fresco:placeholderImage="@mipmap/ic_placeholder"
+            android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+        <TextView
+            style="@style/ViewDogPageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_dog_breed_color"
+            android:layout_below="@id/view_dog_photo" />
+
+        <TextView
+            android:lines="2"
+            style="@style/ViewDogPageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_dog_location_date"
+            android:layout_below="@id/view_dog_breed_color" />
+
+        <TextView
+            android:lines="8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_dog_description"
+            style="@style/ViewDogPageTextSecondary"
+            android:layout_below="@id/view_dog_location_date" />
+
+        <TextView
+            android:lines="2"
+            style="@style/ViewDogPageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_dog_question_text"
+            android:text="@string/view_dog_page_question"
+            android:layout_below="@id/view_dog_description" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dog_view_phone_call"
+            android:layout_below="@id/view_dog_question_text"
+            android:background="@drawable/dog_view_page_border"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_phone"
+                android:id="@+id/view_dog_telephone_icon"
+                />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view_dog_telephone"
+                style="@style/ViewDogPageTextSecondary"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/ViewDogPageText"
+            android:layout_width="match_parent"
+            android:id="@+id/view_dog_report_dog"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/report_dog_text"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@+id/dog_view_phone_call"
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+    </RelativeLayout>
+</ScrollView>
