@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name" translatable="false">Snoozi</string>
     <string name="loading" translatable="true">Cargando perritos perdidos</string>
+    <string name="view_dog_title">Estoy Perdido</string>
+    <string name="view_dog_color_breed">Hola, soy un %1$s color %2$s.</string>
+    <string name="view_dog_location_time">Me encontrarón en %1$s el %2$s.</string>
+    <string name="view_dog_page_question">¿Me reconoces?, quien me encontro dejo un número de télefono</string>
+    <string name="report_dog_text">Reportar publicación</string>
 </resources>

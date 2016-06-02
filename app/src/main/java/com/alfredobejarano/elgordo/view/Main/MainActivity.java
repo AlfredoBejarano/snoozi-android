@@ -1,5 +1,6 @@
 package com.alfredobejarano.elgordo.view.Main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import com.alfredobejarano.elgordo.R;
 import com.alfredobejarano.elgordo.model.Dog;
 import com.alfredobejarano.elgordo.presenter.MainActivityPresenter;
+import com.alfredobejarano.elgordo.view.ViewDog.ViewDogActivity;
 import com.alfredobejarano.elgordo.view.base.View;
 
 import java.util.List;
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements View {
     }
 
     public void openDogActivity(int dogId) {
-        /* Go to show dog activity */
+        Intent intent = new Intent(this, ViewDogActivity.class);
+        intent.putExtra("DOG_ID",dogId);
+        startActivity(intent);
     }
 }

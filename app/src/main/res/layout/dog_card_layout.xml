@@ -1,10 +1,10 @@
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
     card_view:cardUseCompatPadding="true"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:layout_marginBottom="2dp" >
+    android:layout_marginBottom="2dp">
 
     <RelativeLayout
         android:layout_height="wrap_content"
@@ -15,8 +15,9 @@
             android:layout_height="wrap_content">
             <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/dogImage"
-                android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                style="@style/DogPhoto"
+                android:background="@drawable/photo_border"
+                fresco:placeholderImage="@mipmap/ic_placeholder"/>
             <TextView
                 style="@style/DogCardTitle"
                 android:id="@+id/BreedAndColor"

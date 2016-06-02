@@ -2,4 +2,9 @@
 <resources>
     <string name="app_name">Snoozi</string>
     <string name="loading">Loading lost dogs</string>
+    <string name="view_dog_title">I\'m Lost</string>
+    <string name="view_dog_color_breed">Hello, I\'m a %1$s , %2$s colored.</string>
+    <string name="view_dog_location_time">I been founded at %1$s , %2$s.</string>
+    <string name="view_dog_page_question">Can you recognize me? Who found me let a telephone number</string>
+    <string name="report_dog_text">Report listing</string>
 </resources>
