@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity implements View {
 
     @Override
     public void setup(Object data) {
-        getSupportActionBar().hide(); // Hides ActionBar
-
         /* RecyclerView configurations */
         final RecyclerView dogRecyclerView = (RecyclerView) findViewById(R.id.DogsRecyclerView);
         dogRecyclerView.setLayoutManager(new LinearLayoutManager(this));

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="DogPhoto" >
-        <item name="android:layout_height">200dp</item>
+        <item name="android:layout_height">@dimen/dog_photo_size</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:background">@drawable/photo_border</item>
     </style>
