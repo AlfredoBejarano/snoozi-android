@@ -14,6 +14,9 @@ import com.alfredobejarano.elgordo.presenter.ViewDogPresenter;
 import com.alfredobejarano.elgordo.view.base.View;
 import com.facebook.drawee.view.SimpleDraweeView;
 
+/**
+ * This class acts as the view for a lost dog page
+ */
 public class ViewDogActivity extends AppCompatActivity implements View {
 
     private TextView dogBreed;
@@ -22,6 +25,9 @@ public class ViewDogActivity extends AppCompatActivity implements View {
     private TextView dogDescription;
     private SimpleDraweeView dogPhoto;
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +37,9 @@ public class ViewDogActivity extends AppCompatActivity implements View {
         new ViewDogPresenter().attachView(this, dogId);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void setup(Object data) {
         ActionBar actionBar = getSupportActionBar();
@@ -54,6 +63,9 @@ public class ViewDogActivity extends AppCompatActivity implements View {
 
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
@@ -62,6 +74,13 @@ public class ViewDogActivity extends AppCompatActivity implements View {
         return true;
     }
 
+    /**
+     * This method converts a generic Object class to a String,
+     * It acts as a short hand for String.valueOf(), very useful for handling
+     * null values.
+     * @param object - Object, the Object to be parsed as String.
+     * @return String - A String version of the object received.
+     */
     private String stringValueOf(Object object) {
         return String.valueOf(object);
     }

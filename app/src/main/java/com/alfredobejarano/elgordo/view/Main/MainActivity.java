@@ -20,6 +20,11 @@ import java.util.List;
  */
 public class MainActivity extends AppCompatActivity implements View {
 
+    private RecyclerView dogRecyclerView;
+
+    /**
+     * {@inheritDoc}
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,14 +33,23 @@ public class MainActivity extends AppCompatActivity implements View {
         new MainActivityPresenter().attachView(this);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void setup(Object data) {
-        /* RecyclerView configurations */
-        final RecyclerView dogRecyclerView = (RecyclerView) findViewById(R.id.DogsRecyclerView);
+        dogRecyclerView = (RecyclerView) findViewById(R.id.DogsRecyclerView);
         dogRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         dogRecyclerView.setAdapter(new DogRecyclerViewAdapter(((List<Dog>) data),this));
     }
 
+    /**
+     * This method calls a View Page Dog Activity,
+     * it sends via Intent the ID of the selected dog from
+     * the RecyclerView (dogRecyclerView).
+     *
+     * @param dogId - int, the chosen dog's id.
+     */
     public void openDogActivity(int dogId) {
         Intent intent = new Intent(this, ViewDogActivity.class);
         intent.putExtra("DOG_ID",dogId);

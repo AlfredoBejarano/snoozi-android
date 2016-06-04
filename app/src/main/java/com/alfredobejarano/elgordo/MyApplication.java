@@ -5,9 +5,13 @@ import android.app.Application;
 import com.facebook.drawee.backends.pipeline.Fresco;
 
 /**
- * Created by jacorona on 6/1/16.
+ * This class handles all the default behaviors that needs to be changed from
+ * the default Android's Application class.
  */
 public class MyApplication extends Application {
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void onCreate() {
         super.onCreate();
