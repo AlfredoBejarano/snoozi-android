@@ -32,7 +32,6 @@
             android:layout_below="@id/view_dog_photo" />
 
         <TextView
-            android:lines="2"
             style="@style/ViewDogPageText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,7 +39,6 @@
             android:layout_below="@id/view_dog_breed_color" />
 
         <TextView
-            android:lines="8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/view_dog_description"
@@ -48,7 +46,6 @@
             android:layout_below="@id/view_dog_location_date" />
 
         <TextView
-            android:lines="2"
             style="@style/ViewDogPageText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
