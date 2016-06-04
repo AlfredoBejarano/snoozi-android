@@ -5,6 +5,8 @@ import com.alfredobejarano.elgordo.network.ObjectMapper;
 import com.alfredobejarano.elgordo.presenter.base.Presenter;
 import com.alfredobejarano.elgordo.view.base.View;
 
+import java.util.List;
+
 /**
  * This class acts as the presenter for the View dog page.
  */
@@ -41,14 +43,11 @@ public class ViewDogPresenter implements Presenter {
     }
 
     /**
-     * This method connect this presenter to its corresponding view.
-     * This is also responsable for making the API call.
-     *
-     * @param view  - View, The view object that belongs to this presenter.
-     * @param dogId - int, The ID of the dog to be retrieved.
+     * {@inheritDoc}
      */
-    public void attachView(View view, int dogId) {
-        setView(view);
-        ObjectMapper mapper = new ObjectMapper(this, dogId);
+    @Override
+    public void attachView(List<Object> params) {
+        setView((View) params.get(0));
+        ObjectMapper mapper = new ObjectMapper(this, (int) params.get(1));
     }
 }

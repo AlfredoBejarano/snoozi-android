@@ -14,6 +14,8 @@ import com.alfredobejarano.elgordo.presenter.ViewDogPresenter;
 import com.alfredobejarano.elgordo.view.base.View;
 import com.facebook.drawee.view.SimpleDraweeView;
 
+import java.util.ArrayList;
+
 /**
  * This class acts as the view for a lost dog page
  */
@@ -33,8 +35,11 @@ public class ViewDogActivity extends AppCompatActivity implements View {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_dog);
 
-        int dogId = getIntent().getIntExtra("DOG_ID", 0);
-        new ViewDogPresenter().attachView(this, dogId);
+        ArrayList<Object> params = new ArrayList<>();
+        params.add(this);
+        params.add(getIntent().getIntExtra("DOG_ID", 0));
+
+        new ViewDogPresenter().attachView(params);
     }
 
     /**

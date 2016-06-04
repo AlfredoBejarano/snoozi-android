@@ -12,6 +12,7 @@ import com.alfredobejarano.elgordo.presenter.MainActivityPresenter;
 import com.alfredobejarano.elgordo.view.ViewDog.ViewDogActivity;
 import com.alfredobejarano.elgordo.view.base.View;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,7 +31,10 @@ public class MainActivity extends AppCompatActivity implements View {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new MainActivityPresenter().attachView(this);
+        ArrayList<Object> params = new ArrayList<>();
+        params.add(this);
+
+        new MainActivityPresenter().attachView(params);
     }
 
     /**

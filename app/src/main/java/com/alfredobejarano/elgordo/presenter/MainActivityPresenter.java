@@ -4,6 +4,8 @@ import com.alfredobejarano.elgordo.network.ObjectMapper;
 import com.alfredobejarano.elgordo.presenter.base.Presenter;
 import com.alfredobejarano.elgordo.view.base.View;
 
+import java.util.List;
+
 /**
  * Presenter for the main Activity
  */
@@ -43,12 +45,11 @@ public class MainActivityPresenter implements Presenter {
     public void onError(Object error) { /* Empty */ }
 
     /**
-     * This method connect this presenter to its corresponding view.
-     *
-     * @param view - View, The view object that belongs to this presenter.
+     * {@inheritDoc}
      */
-    public void attachView(View view) {
-        setView(view);
+    @Override
+    public void attachView(List<Object> params) {
+        setView((View) params.get(0));
         ObjectMapper mapper = new ObjectMapper(this);
     }
 }
