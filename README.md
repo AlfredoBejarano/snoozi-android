@@ -16,4 +16,5 @@ Retrofit 2.0.2
 Jackson 2.7.9
 
 ReciclerView 23.4.0
+
 CardView 23.4.0
