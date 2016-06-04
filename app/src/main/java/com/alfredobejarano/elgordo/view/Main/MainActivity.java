@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * MainActivity
  * This class functions as the first activity of the application and as the view of the Main presenter.
  */
 public class MainActivity extends AppCompatActivity implements View {
