@@ -7,7 +7,7 @@ package com.alfredobejarano.elgordo.network;
 public class NetworkUtils {
     // TODO - Change the API URL for the production one (when the API enters production m8).
     // public static final String API_BASE_URL = "http://10.16.10.15:3000";
-    public static final String API_BASE_URL = "http://192.168.0.54:3000";
+    public static final String API_BASE_URL = "http://192.168.100.19:3000";
 
     /* Static flags */
     public static final int GET_ALL_DOGS = 0;
