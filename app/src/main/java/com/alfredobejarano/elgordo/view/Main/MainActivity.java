@@ -1,4 +1,4 @@
-package com.alfredobejarano.elgordo.view.Main;
+package com.alfredobejarano.elgordo.view.main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import com.alfredobejarano.elgordo.R;
 import com.alfredobejarano.elgordo.model.Dog;
 import com.alfredobejarano.elgordo.presenter.MainActivityPresenter;
-import com.alfredobejarano.elgordo.view.ViewDog.ViewDogActivity;
+import com.alfredobejarano.elgordo.view.dog.ViewDogActivity;
 import com.alfredobejarano.elgordo.view.base.View;
 
 import java.util.ArrayList;

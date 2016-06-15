@@ -1,4 +1,4 @@
-package com.alfredobejarano.elgordo.view.ViewDog;
+package com.alfredobejarano.elgordo.view.dog;
 
 import android.net.Uri;
 import android.os.Bundle;

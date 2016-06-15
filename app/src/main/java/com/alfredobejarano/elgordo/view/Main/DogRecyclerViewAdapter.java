@@ -1,4 +1,4 @@
-package com.alfredobejarano.elgordo.view.Main;
+package com.alfredobejarano.elgordo.view.main;
 
 import android.net.Uri;
 import android.support.v7.widget.CardView;

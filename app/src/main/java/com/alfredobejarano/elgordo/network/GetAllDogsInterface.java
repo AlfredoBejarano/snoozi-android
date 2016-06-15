@@ -11,6 +11,6 @@ import retrofit2.http.GET;
  * Interface responsable for defining a call for the API to retrieve all the dog records,
  */
 public interface GetAllDogsInterface {
-    @GET("/dog")
+    @GET("/dogs")
     Call<List<Dog>> getDogs();
 }

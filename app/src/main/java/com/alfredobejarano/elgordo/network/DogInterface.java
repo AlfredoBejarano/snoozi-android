@@ -12,9 +12,9 @@ import retrofit2.http.Path;
  * This interface is responsable for defining the API call for retrieving or add a single dog record.
  */
 public interface DogInterface {
-    @GET("/dog/{dog_id}")
+    @GET("/dogs/{dog_id}")
     Call<Dog> getDog(@Path("dog_id") int dog_id);
 
-    @POST("/dog")
+    @POST("/dogs")
     Call<Dog> createDog(@Body Dog dog);
 }
