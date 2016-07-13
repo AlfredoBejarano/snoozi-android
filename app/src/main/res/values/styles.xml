@@ -8,6 +8,20 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Style for Textviews Title AddFounDog activity -->
+    <style name="dogFoundTitle" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@color/cardview_light_background</item>
+    </style>
+
+    <!-- Style for Textviews text AddFounDog activity -->
+    <style name="dogFoundText" parent="@style/dogFoundTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
 </resources>
 
 

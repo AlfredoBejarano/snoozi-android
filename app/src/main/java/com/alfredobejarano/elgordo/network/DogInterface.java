@@ -18,3 +18,4 @@ public interface DogInterface {
     @POST("/dogs")
     Call<Dog> createDog(@Body Dog dog);
 }
+

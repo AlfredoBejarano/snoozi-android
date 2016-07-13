@@ -5,10 +5,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.alfredobejarano.elgordo.R;
 import com.alfredobejarano.elgordo.model.Dog;
 import com.alfredobejarano.elgordo.presenter.MainActivityPresenter;
+import com.alfredobejarano.elgordo.view.dog.FoundDogActivity;
 import com.alfredobejarano.elgordo.view.dog.ViewDogActivity;
 import com.alfredobejarano.elgordo.view.base.View;
 
@@ -57,5 +61,29 @@ public class MainActivity extends AppCompatActivity implements View {
         Intent intent = new Intent(this, ViewDogActivity.class);
         intent.putExtra("DOG_ID",dogId);
         startActivity(intent);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_view_menu, menu);
+        return true;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.action_add_dog:
+                startActivity(new Intent(this, FoundDogActivity.class));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
