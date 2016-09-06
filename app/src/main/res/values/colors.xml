@@ -5,4 +5,6 @@
     <color name="textPrimary">#FF333333</color>
     <color name="textSecondary">#DD333333</color>
     <color name="colorPrimaryDark">#D02F2F</color>
+    <color name="colorWhite">#FFF9F9F9</color>
+    <color name="colorWhite30Alpha">#1EF9F9F9</color>
 </resources>
