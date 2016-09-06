@@ -20,7 +20,18 @@ public class Dog {
     private String image;
     private Bitmap downloadedImage;
 
-    /* For 'get all dogs' use */
+    /**
+     * This constructor is for the "get all dogs" (MainActivity) use case.
+     * @param id - The dog's id from the database.
+     * @param breed - The breed of the dog.
+     * @param color - The fur color of the dog.
+     * @param gender - The gender of the dog (true for male, false for female).
+     * @param found_location - The coordenates of the dog (xx.xxxx , xx.xxxx format).
+     * @param found_date - The date when the dog was found.
+     * @param description - The description of the dog.
+     * @param created_at - The date when the dog was added to the database.
+     * @param thumb_url - The URL of the thumbnail image.
+     */
     public Dog(int id, String breed, String color, boolean gender, String found_location, String found_date, String description, String created_at, String thumb_url) {
         this.id = id;
         this.breed = breed;
@@ -33,7 +44,19 @@ public class Dog {
         this.thumb_url = thumb_url;
     }
 
-    /* For 'get a single dog' use */
+    /**
+     * This constructor is for the "get a single dog" use case.
+     * * @param id - The dog's id from the database.
+     * @param breed - The breed of the dog.
+     * @param color - The fur color of the dog.
+     * @param gender - The gender of the dog (true for male, false for female).
+     * @param found_location - The coordenates of the dog (xx.xxxx , xx.xxxx format).
+     * @param found_date - The date when the dog was found.
+     * @param description - The description of the dog.
+     * @param created_at - The date when the dog was added to the database.
+     * @param number - The number of the user who found the dog.
+     * @param image_url - The URL of the dog's photo.
+     */
     public Dog(int id, String breed, String color, boolean gender, String found_location, String found_date, String description, Long number, String created_at, String image_url) {
         this.id = id;
         this.breed = breed;
@@ -47,7 +70,17 @@ public class Dog {
         this.image_url = image_url;
     }
 
-    /* For 'create a dog' use */
+    /**
+     * This constructor is for the "add a dog to the database" (FoundDogActivity) use case.
+     * @param breed - The breed of the dog.
+     * @param color - The fur color of the dog.
+     * @param gender - The gender of the dog (true for male, false for female).
+     * @param found_location - The coordenates of the dog (xx.xxxx , xx.xxxx format).
+     * @param found_date - The date when the dog was found.
+     * @param description - The description of the dog.
+     * @param number - The number of the user who found the dog.
+     * @param image - The photo taken by the user of the dog (in Base64 String format).
+     */
     public Dog(String breed, String color, boolean gender, String found_location, String found_date, String description, Long number, String image) {
         this.breed = breed;
         this.color = color;
@@ -59,7 +92,18 @@ public class Dog {
         this.image = image;
     }
 
-    /* For 'display a dog' use */
+    /**
+     * This constructor is for the "display a single dog" (ViewDogActivity) use case.
+     * * @param id - The dog's id from the database.
+     * @param breed - The breed of the dog.
+     * @param color - The fur color of the dog.
+     * @param gender - The gender of the dog (true for male, false for female).
+     * @param found_location - The coordenates of the dog (xx.xxxx , xx.xxxx format).
+     * @param found_date - The date when the dog was found.
+     * @param description - The description of the dog.
+     * @param number - The number of the user who found the dog.
+     * @param downloadedImage - The URL of the dog's photo.
+     */
     public Dog(String breed, String color, boolean gender, String found_location, String found_date, String description, Long number, Bitmap downloadedImage) {
         this.breed = breed;
         this.color = color;

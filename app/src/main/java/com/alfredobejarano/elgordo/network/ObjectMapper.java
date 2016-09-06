@@ -82,7 +82,7 @@ public class ObjectMapper {
 
 
     /**
-     * This constructor makes a call for adding a  dog to the database;
+     * This constructor makes a call for adding a dog to the database;
      *
      * @param presenter the presenter for the desired view
      * @param body      the Dog object to be parsed and send to the API
