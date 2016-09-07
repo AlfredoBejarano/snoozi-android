@@ -9,4 +9,6 @@
     <string name="report_dog_text">Reportar publicación</string>
     <string name="dog_found_title_welcome">Parece que encontrasté un perro</string>
     <string name="dog_found_text_welcome">Vamos a hacerte algunas preguntas, por favor trata de ser lo más descriptivo posible.</string>
+    <string name="next">Siguiente</string>
+    <string name="ready">Listo</string>
 </resources>
