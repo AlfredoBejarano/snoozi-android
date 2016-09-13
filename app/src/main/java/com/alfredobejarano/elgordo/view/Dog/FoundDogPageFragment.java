@@ -21,7 +21,7 @@ public class FoundDogPageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.fragment_found_dog_page, container, false);
+                R.layout.fragment_found_dog_page_welcome, container, false);
 
         return rootView;
     }

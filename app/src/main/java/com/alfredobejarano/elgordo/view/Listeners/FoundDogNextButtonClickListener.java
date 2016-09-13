@@ -27,6 +27,8 @@ public class FoundDogNextButtonClickListener implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.found_dog_flow_next_button) {
+            int currentItem = foundDogViewPager.getCurrentItem();
+
             if(foundDogViewPager.getCurrentItem() < 6) {
                 foundDogViewPager.setCurrentItem(foundDogViewPager.getCurrentItem() + 1);
             }

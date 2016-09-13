@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.dog.FoundDogPageFragment">
+
+    <TextView
+        style="@style/dogFoundTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/found_dog_title_textview"
+        android:text="@string/dog_found_title_welcome" />
+
+    <TextView
+        style="@style/dogFoundText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/found_dog_text_textview"
+        android:text="@string/dog_found_text_welcome"
+        android:layout_below="@id/found_dog_title_textview" />
+
+</RelativeLayout>

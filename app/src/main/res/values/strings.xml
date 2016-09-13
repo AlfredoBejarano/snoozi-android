@@ -7,8 +7,18 @@
     <string name="view_dog_location_time">Me encontrarón en %1$s el %2$s.</string>
     <string name="view_dog_page_question">¿Me reconoces?, quien me encontro dejo un número de télefono</string>
     <string name="report_dog_text">Reportar publicación</string>
-    <string name="dog_found_title_welcome">Parece que encontrasté un perro</string>
-    <string name="dog_found_text_welcome">Vamos a hacerte algunas preguntas, por favor trata de ser lo más descriptivo posible.</string>
+
+    <!--Found Dog flow String resources -->
+    <string name="dog_found_title_welcome">¿Has encontrado un perrito?</string>
+    <string name="dog_found_text_welcome">Vamos a preguntarte algunos detalles para que sea más fácil que lo encuentren..</string>
     <string name="next">Siguiente</string>
     <string name="ready">Listo</string>
+    <string name="breed_color_question">¿Cuál crees que sea su raza?</string>
+    <string name="fur_color_question">¿De qué color es su pelo?</string>
+    <string name="gender_question">¿Es macho o hembra?</string>
+    <string name="found_location_question">¿En dónde lo encontraste?</string>
+    <string name="found_date_question">¿Cuándo lo encontraste?</string>
+    <string name="phone_number_question">¿Cuál es tu número teléfonico?</string>
+    <string name="description_question">¿Qué más puedes decirnos del perrito?</string>
+    <string name="photo_question">Escoge una foto del perrito</string>
 </resources>
