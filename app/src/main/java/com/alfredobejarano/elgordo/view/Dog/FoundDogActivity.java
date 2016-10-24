@@ -7,19 +7,28 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.alfredobejarano.elgordo.R;
-import com.alfredobejarano.elgordo.view.base.FoundDogViewPagerAdapter;
+import com.alfredobejarano.elgordo.view.adapters.FoundDogViewPagerAdapter;
 import com.alfredobejarano.elgordo.view.base.View;
 import com.alfredobejarano.elgordo.view.listeners.FoundDogNextButtonClickListener;
 import com.alfredobejarano.elgordo.view.listeners.ViewPagerChangeListener;
+import com.alfredobejarano.elgordo.view.pages.TextInputPage;
 import com.alfredobejarano.elgordo.view.pages.WelcomePage;
 
-public class FoundDogActivity extends AppCompatActivity implements View, WelcomePage.OnFragmentInteractionListener {
+import java.util.ArrayList;
 
+public class FoundDogActivity extends AppCompatActivity
+        implements View, WelcomePage.OnFragmentInteractionListener, TextInputPage.OnFragmentInteractionListener {
+
+    private ArrayList params;
     private Button nextButton;
     private FoundDogViewPager viewPager;
     private LinearLayout viewPagerIndicator;
     private ViewPagerChangeListener viewPagerChangeListener;
     private FoundDogViewPagerAdapter foundDogViewPagerAdapter;
+
+    public ArrayList getParams() { return params; }
+    public void setParams(ArrayList params) { this.params = params; }
+    public FoundDogViewPager getViewPager() { return viewPager;}
 
     /**
      * {@inheritDoc}
@@ -29,6 +38,8 @@ public class FoundDogActivity extends AppCompatActivity implements View, Welcome
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_found_dog);
         getSupportActionBar().hide();
+
+        params = new ArrayList();
 
         viewPagerIndicator = (LinearLayout) findViewById(R.id.found_dog_view_pager_indicator_layout);
 

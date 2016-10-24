@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.alfredobejarano.elgordo.R;
+import com.alfredobejarano.elgordo.view.base.Page;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,14 +18,9 @@ import com.alfredobejarano.elgordo.R;
  * to handle interaction events.
  * create an instance of this fragment.
  */
-public class WelcomePage extends Fragment {
-
+public class WelcomePage extends Fragment implements Page{
     private OnFragmentInteractionListener mListener;
-
-    public WelcomePage() {
-        // Required empty public constructor
-    }
-
+    public WelcomePage() { /* Required empty public constructor */ }
 
     /**
      * {@inheritDoc}
@@ -61,6 +57,12 @@ public class WelcomePage extends Fragment {
         super.onDetach();
         mListener = null;
     }
+
+    @Override
+    public void setup(int pageNumber) { /* auto-generated code */ }
+
+    @Override
+    public void sendToActivity() { /* This method does nothing in this page */ }
 
     /**
      * This interface must be implemented by activities that contain this

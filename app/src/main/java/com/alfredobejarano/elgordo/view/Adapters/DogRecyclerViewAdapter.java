@@ -1,4 +1,4 @@
-package com.alfredobejarano.elgordo.view.main;
+package com.alfredobejarano.elgordo.view.adapters;
 
 import android.net.Uri;
 import android.support.v7.widget.CardView;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.alfredobejarano.elgordo.R;
 import com.alfredobejarano.elgordo.model.Dog;
 import com.alfredobejarano.elgordo.network.NetworkUtils;
+import com.alfredobejarano.elgordo.view.main.MainActivity;
 import com.facebook.drawee.view.DraweeView;
 
 import java.util.List;

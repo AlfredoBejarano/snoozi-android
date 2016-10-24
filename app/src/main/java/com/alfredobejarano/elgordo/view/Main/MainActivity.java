@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import com.alfredobejarano.elgordo.R;
 import com.alfredobejarano.elgordo.model.Dog;
 import com.alfredobejarano.elgordo.presenter.MainActivityPresenter;
+import com.alfredobejarano.elgordo.view.adapters.DogRecyclerViewAdapter;
 import com.alfredobejarano.elgordo.view.dog.FoundDogActivity;
 import com.alfredobejarano.elgordo.view.dog.ViewDogActivity;
 import com.alfredobejarano.elgordo.view.base.View;

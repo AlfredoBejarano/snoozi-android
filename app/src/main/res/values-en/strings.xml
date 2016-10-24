@@ -12,4 +12,5 @@
     <string name="dog_found_text_welcome">We are going to make you a few questions about him, please be very descriptive when answering them.</string>
     <string name="next">Next</string>
     <string name="ready">OK</string>
+    <string name="found_dog_breed">Which breed is the dog?</string>
 </resources>

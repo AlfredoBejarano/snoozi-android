@@ -6,6 +6,10 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Scroller;
+
+import com.alfredobejarano.elgordo.view.adapters.FoundDogViewPagerAdapter;
+import com.alfredobejarano.elgordo.view.base.Page;
+
 import java.lang.reflect.Field;
 
 public class FoundDogViewPager extends ViewPager {
@@ -52,6 +56,7 @@ public class FoundDogViewPager extends ViewPager {
 
         @Override
         public void startScroll(int startX, int startY, int dx, int dy, int duration) {
+            ((Page)((FoundDogViewPagerAdapter) getAdapter()).getCurrentFragment()).setup(getCurrentItem());
             super.startScroll(startX, startY, dx, dy, 350 /*1 secs*/);
         }
     }
