@@ -1,23 +1,25 @@
 package com.alfredobejarano.elgordo.view.dog;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.alfredobejarano.elgordo.R;
-import com.alfredobejarano.elgordo.view.adapters.ViewPagerAdapter;
+import com.alfredobejarano.elgordo.view.base.FoundDogViewPagerAdapter;
 import com.alfredobejarano.elgordo.view.base.View;
 import com.alfredobejarano.elgordo.view.listeners.FoundDogNextButtonClickListener;
 import com.alfredobejarano.elgordo.view.listeners.ViewPagerChangeListener;
+import com.alfredobejarano.elgordo.view.pages.WelcomePage;
 
-public class FoundDogActivity extends AppCompatActivity implements View {
+public class FoundDogActivity extends AppCompatActivity implements View, WelcomePage.OnFragmentInteractionListener {
 
     private Button nextButton;
-    private Button readyButton;
     private FoundDogViewPager viewPager;
     private LinearLayout viewPagerIndicator;
     private ViewPagerChangeListener viewPagerChangeListener;
+    private FoundDogViewPagerAdapter foundDogViewPagerAdapter;
 
     /**
      * {@inheritDoc}
@@ -31,22 +33,44 @@ public class FoundDogActivity extends AppCompatActivity implements View {
         viewPagerIndicator = (LinearLayout) findViewById(R.id.found_dog_view_pager_indicator_layout);
 
         viewPager = (FoundDogViewPager) findViewById(R.id.found_dog_view_pager);
-        viewPager.setAdapter(new ViewPagerAdapter());
+        foundDogViewPagerAdapter = new FoundDogViewPagerAdapter(getSupportFragmentManager());
+
+        viewPager.setAdapter(foundDogViewPagerAdapter);
 
         viewPagerChangeListener = new ViewPagerChangeListener(viewPagerIndicator, this, viewPager);
         viewPager.addOnPageChangeListener(viewPagerChangeListener);
 
         nextButton = (Button) findViewById(R.id.found_dog_flow_next_button);
-        readyButton = (Button) findViewById(R.id.found_dog_flow_ready_button);
+        nextButton.setOnClickListener(new FoundDogNextButtonClickListener(viewPager, nextButton, this));
+    }
 
-        nextButton.setOnClickListener(new FoundDogNextButtonClickListener(viewPager, nextButton, readyButton, this));
-        readyButton.setOnClickListener(new FoundDogNextButtonClickListener(viewPager, nextButton, readyButton, this));
+    /**
+     * This method changes the behaviour when the back button is pressed in this activity.
+     * If the current page number is bigger than 0, it send the user to the previous page.
+     * If not, it sends the user back to the previous activity.
+     */
+    @Override
+    public void onBackPressed() {
+        if(viewPager != null) {
+            int currentPage = viewPager.getCurrentItem();
+            if( currentPage > 0) {
+                viewPager.setCurrentItem(currentPage - 1);
+                nextButton.setText(getResources().getText(R.string.next));
+            } else {
+                super.onBackPressed();
+            }
+        }
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public void setup(Object data) { /* This method is not necessary now */}
+    public void setup(Object data) { /* This method is not necessary now */ }
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void onFragmentInteraction(Uri uri) { /*  auto-generated code */ }
 }

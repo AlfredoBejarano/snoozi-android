@@ -13,32 +13,28 @@ import com.alfredobejarano.elgordo.view.dog.FoundDogViewPager;
  */
 public class FoundDogNextButtonClickListener implements View.OnClickListener {
     private final Button button;
-    private final Button button2;
     private final Context context;
     private final FoundDogViewPager foundDogViewPager;
 
-    public FoundDogNextButtonClickListener(FoundDogViewPager foundDogViewPager, Button button, Button button2, Context context) {
+    public FoundDogNextButtonClickListener(FoundDogViewPager foundDogViewPager, Button button, Context context) {
         this.foundDogViewPager = foundDogViewPager;
         this.button = button;
-        this.button2 = button2;
         this.context = context;
     }
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.found_dog_flow_next_button) {
-            int currentItem = foundDogViewPager.getCurrentItem();
+        int pages = foundDogViewPager.getAdapter().getCount() - 1;
+        int currentItem = foundDogViewPager.getCurrentItem();
 
-            if(foundDogViewPager.getCurrentItem() < 6) {
-                foundDogViewPager.setCurrentItem(foundDogViewPager.getCurrentItem() + 1);
-            }
-
-            if(foundDogViewPager.getCurrentItem() == foundDogViewPager.getAdapter().getCount() - 1){
-                button.setVisibility(View.GONE);
-                button2.setVisibility(View.VISIBLE);
-            }
-        } else {
+        if(currentItem == pages) {
             Log.d("TODO", "Dod upload goes here!");
+        } else if(currentItem == pages - 1) {
+            button.setText(context.getResources().getText(R.string.ready));
+            foundDogViewPager.setCurrentItem(foundDogViewPager.getCurrentItem() + 1);
+        } else {
+            button.setText(context.getResources().getText(R.string.next));
+            foundDogViewPager.setCurrentItem(foundDogViewPager.getCurrentItem() + 1);
         }
     }
 }

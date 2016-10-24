@@ -21,4 +21,7 @@
     <string name="phone_number_question">¿Cuál es tu número teléfonico?</string>
     <string name="description_question">¿Qué más puedes decirnos del perrito?</string>
     <string name="photo_question">Escoge una foto del perrito</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

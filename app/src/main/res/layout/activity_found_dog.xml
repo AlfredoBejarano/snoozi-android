@@ -6,39 +6,33 @@
     android:padding="0dp"
     tools:context="com.alfredobejarano.elgordo.view.dog.FoundDogActivity">
 
-    
     <ImageView
         android:scaleType="centerCrop"
         android:src="@drawable/back_layer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <com.alfredobejarano.elgordo.view.dog.FoundDogViewPager
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/found_dog_view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <Button
-        style="@style/dogFoundNextButton"
-        android:text="@string/next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/found_dog_flow_next_button" />
-
-    <Button
-        style="@style/dogFoundNextButton"
-        android:visibility="gone"
-        android:text="@string/ready"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/found_dog_flow_ready_button" />
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <LinearLayout
         style="@style/dogFoundDotIndicator"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/found_dog_view_pager_indicator_layout"></LinearLayout>
+        android:id="@+id/found_dog_view_pager_indicator_layout" />
 
+    <Button
+        android:text="@string/next"
+        style="@style/dogFoundNextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/found_dog_flow_next_button" />
+
+    <com.alfredobejarano.elgordo.view.dog.FoundDogViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/found_dog_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/found_dog_flow_next_button"  />
 </RelativeLayout>

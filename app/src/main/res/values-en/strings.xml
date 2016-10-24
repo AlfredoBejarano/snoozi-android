@@ -11,4 +11,5 @@
     <string name="dog_found_title_welcome">Seems like you found a dog</string>
     <string name="dog_found_text_welcome">We are going to make you a few questions about him, please be very descriptive when answering them.</string>
     <string name="next">Next</string>
+    <string name="ready">OK</string>
 </resources>
