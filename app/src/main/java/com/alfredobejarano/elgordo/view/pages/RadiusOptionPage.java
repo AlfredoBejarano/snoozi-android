@@ -7,34 +7,26 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import com.alfredobejarano.elgordo.R;
-import com.alfredobejarano.elgordo.view.base.Page;
-import com.alfredobejarano.elgordo.view.dog.FoundDogActivity;
-import com.alfredobejarano.elgordo.view.dog.FoundDogViewPager;
-
-import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link TextInputPage.OnFragmentInteractionListener} interface
+ * {@link RadiusOptionPage.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link TextInputPage#newInstance} factory method to
+ * Use the {@link RadiusOptionPage#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class TextInputPage extends Fragment implements Page {
+public class RadiusOptionPage extends Fragment {
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
 
-    private EditText input;
-    private TextView title;
-    private int pageNumber;
-    private FoundDogActivity foundDogActivity;
-    private FoundDogViewPager foundDogViewPager;
     private OnFragmentInteractionListener mListener;
 
-    public TextInputPage() {
+    public RadiusOptionPage() {
         // Required empty public constructor
     }
 
@@ -44,32 +36,24 @@ public class TextInputPage extends Fragment implements Page {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment TextInputPage.
+     * @return A new instance of fragment RadiusOptionPage.
      */
     // TODO: Rename and change types and number of parameters
-    public static TextInputPage newInstance(String param1, String param2) {
-        TextInputPage fragment = new TextInputPage();
+    public static RadiusOptionPage newInstance(String param1, String param2) {
+        RadiusOptionPage fragment = new RadiusOptionPage();
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        foundDogActivity = (FoundDogActivity) getActivity();
-        foundDogViewPager = foundDogActivity.getViewPager();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_text_input_page, container, false);
-
-        input = (EditText) view.findViewById(R.id.found_dog_breed_input);
-        title = (TextView) view.findViewById(R.id.found_dog_breed_title);
-
-        return view;
+        return inflater.inflate(R.layout.fragment_radius_option_page, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -94,41 +78,6 @@ public class TextInputPage extends Fragment implements Page {
     public void onDetach() {
         super.onDetach();
         mListener = null;
-    }
-
-
-    @Override
-    public void setup(int pageNumber) {
-        this.pageNumber = pageNumber;
-        switch(pageNumber) {
-            case 1:
-                title.setText(getResources().getText(R.string.found_dog_breed));
-                break;
-            case 2:
-                title.setText(getResources().getString(R.string.found_dog_color));
-                break;
-            default:
-                title.setText("");
-                break;
-        }
-    }
-
-    /**
-     * This method sends the current value tot heactivity for building the JSON.
-     */
-    @Override
-    public void sendToActivity() {
-        if(input != null) {
-            ArrayList params = foundDogActivity.getParams();
-            if(params.size() >= pageNumber){
-                params.remove(pageNumber-1);
-                params.add(pageNumber-1, String.valueOf(input.getText()));
-                foundDogActivity.setParams(params);
-            } else {
-                params.add(String.valueOf(input.getText()));
-                foundDogActivity.setParams(params);
-            }
-        }
     }
 
     /**

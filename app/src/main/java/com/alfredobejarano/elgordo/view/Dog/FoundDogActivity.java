@@ -3,6 +3,7 @@ package com.alfredobejarano.elgordo.view.dog;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -11,13 +12,15 @@ import com.alfredobejarano.elgordo.view.adapters.FoundDogViewPagerAdapter;
 import com.alfredobejarano.elgordo.view.base.View;
 import com.alfredobejarano.elgordo.view.listeners.FoundDogNextButtonClickListener;
 import com.alfredobejarano.elgordo.view.listeners.ViewPagerChangeListener;
+import com.alfredobejarano.elgordo.view.pages.RadiusOptionPage;
 import com.alfredobejarano.elgordo.view.pages.TextInputPage;
 import com.alfredobejarano.elgordo.view.pages.WelcomePage;
 
 import java.util.ArrayList;
 
 public class FoundDogActivity extends AppCompatActivity
-        implements View, WelcomePage.OnFragmentInteractionListener, TextInputPage.OnFragmentInteractionListener {
+        implements View, WelcomePage.OnFragmentInteractionListener, TextInputPage.OnFragmentInteractionListener,
+        RadiusOptionPage.OnFragmentInteractionListener {
 
     private ArrayList params;
     private Button nextButton;
@@ -27,7 +30,8 @@ public class FoundDogActivity extends AppCompatActivity
     private FoundDogViewPagerAdapter foundDogViewPagerAdapter;
 
     public ArrayList getParams() { return params; }
-    public void setParams(ArrayList params) { this.params = params; }
+    public void setParams(ArrayList params) { this.params = params;
+        Log.d("TODO", String.valueOf(params));}
     public FoundDogViewPager getViewPager() { return viewPager;}
 
     /**

@@ -35,6 +35,7 @@ public class FoundDogViewPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch(position) {
             case 1: return new TextInputPage();
+            case 2: return new TextInputPage();
             default: return new WelcomePage();
         }
     }
