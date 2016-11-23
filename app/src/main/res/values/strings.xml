@@ -22,9 +22,10 @@
     <string name="description_question">¿Qué más puedes decirnos del perrito?</string>
     <string name="photo_question">Escoge una foto del perrito</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="found_dog_breed">¿Cuál es la raza del perro?</string>
     <string name="found_dog_color">¿De qué color es su pelo?</string>
+    <string name="found_dog_gender">¿Que género es el perro?</string>
+    <string name="male">Macho</string>
+    <string name="female">Hembra</string>
 
 </resources>

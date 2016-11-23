@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 
 import com.alfredobejarano.elgordo.R;
 import com.alfredobejarano.elgordo.view.adapters.FoundDogViewPagerAdapter;
@@ -30,8 +31,7 @@ public class FoundDogActivity extends AppCompatActivity
     private FoundDogViewPagerAdapter foundDogViewPagerAdapter;
 
     public ArrayList getParams() { return params; }
-    public void setParams(ArrayList params) { this.params = params;
-        Log.d("TODO", String.valueOf(params));}
+    public void setParams(ArrayList params) { this.params = params; Log.d("TODO", String.valueOf(params));}
     public FoundDogViewPager getViewPager() { return viewPager;}
 
     /**
