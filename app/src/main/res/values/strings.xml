@@ -1,4 +1,5 @@
 <resources>
+    <!-- General String resources -->
     <string name="app_name" translatable="false">Snoozi</string>
     <string name="loading" translatable="true">Cargando perritos perdidos</string>
     <string name="add_found_dog">Me encontré un perro</string>
@@ -22,10 +23,10 @@
     <string name="description_question">¿Qué más puedes decirnos del perrito?</string>
     <string name="photo_question">Escoge una foto del perrito</string>
 
+    <string name="male">Macho</string>
+    <string name="female">Hembra</string>
     <string name="found_dog_breed">¿Cuál es la raza del perro?</string>
     <string name="found_dog_color">¿De qué color es su pelo?</string>
     <string name="found_dog_gender">¿Que género es el perro?</string>
-    <string name="male">Macho</string>
-    <string name="female">Hembra</string>
 
 </resources>
