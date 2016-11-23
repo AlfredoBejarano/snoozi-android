@@ -14,8 +14,7 @@
     <string name="ready">OK</string>
 
     <string name="male">Male</string>
-    <string name="female">Femalegit status
-    </string>
+    <string name="female">Female</string>
     <string name="found_dog_breed">What breed is the dog?</string>
     <string name="found_dog_color">What color is it fur?</string>
     <string name="found_dog_gender">Which gender the dog is?</string>
