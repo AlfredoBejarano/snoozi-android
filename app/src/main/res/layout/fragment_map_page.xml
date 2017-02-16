@@ -19,12 +19,21 @@
         android:text="@string/dog_found_location_title"
         android:layout_above="@id/found_dog_location_text_query" />
 
-    <fragment
+    <com.google.android.gms.maps.MapView
         android:layout_width="256dp"
         android:layout_height="256dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/found_dog_location_map"
-        tools:context=".view.dog.FoundDogActivity"
-        android:layout_above="@id/found_dog_location_title"
-        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        tools:context=".MapPage"
+        android:layout_above="@id/found_dog_location_title" />
+
+    <Button
+        android:id="@+id/found_dog_location_query"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/ic_query_location"
+        android:layout_alignBaseline="@+id/found_dog_location_text_query"
+        android:layout_alignBottom="@+id/found_dog_location_text_query"
+        android:layout_toRightOf="@+id/found_dog_location_text_query"
+        android:layout_toEndOf="@+id/found_dog_location_text_query" />
 </RelativeLayout>

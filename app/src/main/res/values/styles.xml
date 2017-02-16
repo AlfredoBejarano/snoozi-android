@@ -46,6 +46,7 @@
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:maxLines">1</item>
         <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">viewStart</item>
     </style>
 

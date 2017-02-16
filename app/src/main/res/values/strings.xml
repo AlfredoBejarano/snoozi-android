@@ -29,8 +29,14 @@
     <string name="found_dog_color">¿De qué color es su pelo?</string>
     <string name="found_dog_gender">¿Qué género es el perro?</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="dog_found_location_title">¿Donde encontraste al perro?</string>
     <string name="dog_found_location_button_text">Usar mi Ubicacion</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="found_dog_last_know_location">Tu ultima ubicacion</string>
+    <string name="found_dog_last_know_location_description">Esta es la ultima ubicacion almacenada por tu dispositivo.</string>
+    <string name="found_dog_current_location">Tu ubicacion actual</string>
+    <string name="found_dog_current_location_description">Esta es tu ubicacion actual.</string>
+    <string name="found_dog_error_address">No pudimos encontrar la direccion</string>
 
 </resources>

@@ -20,4 +20,9 @@
     <string name="found_dog_gender">Which gender the dog is?</string>
     <string name="dog_found_location_title">Where did you found the dog?</string>
     <string name="dog_found_location_button_text">Use my location</string>
+
+    <string name="found_dog_last_know_location">Your last know location</string>
+    <string name="found_dog_last_know_location_description">This is the last location stored in your device.</string>
+    <string name="found_dog_current_location">Your current location</string>
+    <string name="found_dog_current_location_description">This is your current location.</string>
 </resources>

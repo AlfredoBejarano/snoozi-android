@@ -29,9 +29,6 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class RadiusOptionPage extends Fragment implements Page {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-
     private int pageNumber;
     private boolean gender = true;
     private RadioButton male, female;
@@ -49,7 +46,6 @@ public class RadiusOptionPage extends Fragment implements Page {
      *
      * @return A new instance of fragment RadiusOptionPage.
      */
-    // TODO: Rename and change types and number of parameters
     public static RadiusOptionPage newInstance() {
         RadiusOptionPage fragment = new RadiusOptionPage();
         return fragment;
@@ -88,7 +84,6 @@ public class RadiusOptionPage extends Fragment implements Page {
         return view;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -142,7 +137,7 @@ public class RadiusOptionPage extends Fragment implements Page {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
+
         void onFragmentInteraction(Uri uri);
     }
 }
