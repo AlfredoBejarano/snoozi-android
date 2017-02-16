@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     tools:context="com.alfredobejarano.elgordo.view.pages.WelcomePage">
 
+
     <TextView
         style="@style/dogFoundText"
         android:layout_width="wrap_content"

@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alfredobejarano.elgordo.view.pages.MapPage">
+
+
+    <EditText
+        style="@style/dogInputText"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/found_dog_location_text_query" />
+
+    <TextView
+        style="@style/dogFoundTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/found_dog_location_title"
+        android:text="@string/dog_found_location_title"
+        android:layout_above="@id/found_dog_location_text_query" />
+
+    <fragment
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/found_dog_location_map"
+        tools:context=".view.dog.FoundDogActivity"
+        android:layout_above="@id/found_dog_location_title"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+</RelativeLayout>

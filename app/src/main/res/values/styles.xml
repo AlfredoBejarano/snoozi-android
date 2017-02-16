@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -26,10 +26,11 @@
     <!-- Style for next DogFoundFlow button AddFounDog activity -->
     <style name="dogFoundNextButton" parent="@style/dogFoundTitle">
         <item name="android:textSize">16sp</item>
-        <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:textColor">@color/colorWhite</item>
-        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:textAllCaps">false</item>
         <item name="android:background">#00FFFFFF</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
     </style>
 
     <!-- Style for next Dots indicator layout in AddFounDog activity -->
@@ -42,11 +43,19 @@
     <!-- Style for FoundDog text input -->
     <style name="dogInputText" parent="@style/Widget.AppCompat.EditText">
         <item name="android:textSize">28dp</item>
-        <item name="android:textAlignment">viewStart</item>
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">viewStart</item>
     </style>
+
+    <!-- Style for buttons in FoundDog Views -->
+    <style name="dogFoundButton" parent="@style/Widget.AppCompat.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@color/colorTransparent</item>
+    </style>
+
 </resources>
 
 

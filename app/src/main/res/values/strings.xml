@@ -27,6 +27,10 @@
     <string name="female">Hembra</string>
     <string name="found_dog_breed">¿Cuál es la raza del perro?</string>
     <string name="found_dog_color">¿De qué color es su pelo?</string>
-    <string name="found_dog_gender">¿Que género es el perro?</string>
+    <string name="found_dog_gender">¿Qué género es el perro?</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="dog_found_location_title">¿Donde encontraste al perro?</string>
+    <string name="dog_found_location_button_text">Usar mi Ubicacion</string>
 
 </resources>
