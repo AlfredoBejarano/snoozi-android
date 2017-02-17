@@ -39,4 +39,7 @@
     <string name="found_dog_current_location_description">Esta es tu ubicacion actual.</string>
     <string name="found_dog_error_address">No pudimos encontrar la direccion</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import com.alfredobejarano.elgordo.view.pages.RadiusOptionPage;
 import com.alfredobejarano.elgordo.view.pages.TextInputPage;
 import com.alfredobejarano.elgordo.view.pages.WelcomePage;
-import com.alfredobejarano.elgordo.view.pages.MapPage;
 
 /**
  * Created by jacorona on 10/24/16.
@@ -39,7 +38,6 @@ public class FoundDogViewPagerAdapter extends FragmentPagerAdapter {
             case 1: return new TextInputPage();
             case 2: return new TextInputPage();
             case 3: return new RadiusOptionPage();
-            case 4: return new MapPage();
             default: return new WelcomePage();
         }
     }

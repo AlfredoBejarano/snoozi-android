@@ -1,10 +1,7 @@
 package com.alfredobejarano.elgordo.view.dog;
 
-import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Button;
@@ -12,24 +9,19 @@ import android.widget.LinearLayout;
 
 import com.alfredobejarano.elgordo.R;
 import com.alfredobejarano.elgordo.view.adapters.FoundDogViewPagerAdapter;
-import com.alfredobejarano.elgordo.view.base.Page;
 import com.alfredobejarano.elgordo.view.base.View;
 import com.alfredobejarano.elgordo.view.listeners.FoundDogNextButtonClickListener;
 import com.alfredobejarano.elgordo.view.listeners.ViewPagerChangeListener;
-import com.alfredobejarano.elgordo.view.pages.MapPage;
 import com.alfredobejarano.elgordo.view.pages.RadiusOptionPage;
 import com.alfredobejarano.elgordo.view.pages.TextInputPage;
 import com.alfredobejarano.elgordo.view.pages.WelcomePage;
-import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationServices;
 
 import java.util.ArrayList;
 
 public class FoundDogActivity extends AppCompatActivity
         implements View, WelcomePage.OnFragmentInteractionListener, TextInputPage.OnFragmentInteractionListener,
-        RadiusOptionPage.OnFragmentInteractionListener,
-        MapPage.OnFragmentInteractionListener {
+        RadiusOptionPage.OnFragmentInteractionListener {
 
     private ArrayList params;
     private Button nextButton;
