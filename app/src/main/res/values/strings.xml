@@ -29,6 +29,10 @@
     <string name="found_dog_color">¿De qué color es su pelo?</string>
     <string name="found_dog_gender">¿Qué género es el perro?</string>
 
+    <string name="found_dog_description_title">Cuentanos mas sobre el perro</string>
+    <string name="found_dog_description_text">¿Traia un collar?, ¿Alguna herida o marca?, ¿Que otros detalles puedes contarnos sobre el perro?</string>
+
+
     <string name="dog_found_location_title">¿Donde encontraste al perro?</string>
     <string name="dog_found_location_button_text">Usar mi Ubicacion</string>
     <string name="title_activity_maps">Map</string>
@@ -38,6 +42,7 @@
     <string name="found_dog_current_location">Tu ubicacion actual</string>
     <string name="found_dog_current_location_description">Esta es tu ubicacion actual.</string>
     <string name="found_dog_error_address">No pudimos encontrar la direccion</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

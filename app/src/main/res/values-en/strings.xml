@@ -25,4 +25,7 @@
     <string name="found_dog_last_know_location_description">This is the last location stored in your device.</string>
     <string name="found_dog_current_location">Your current location</string>
     <string name="found_dog_current_location_description">This is your current location.</string>
+
+    <string name="found_dog_description_title">Cuentanos mas sobre el perro</string>
+    <string name="found_dog_description_text">It had a collar? a wound or a mark? What other details can you describe about the dog?</string>
 </resources>

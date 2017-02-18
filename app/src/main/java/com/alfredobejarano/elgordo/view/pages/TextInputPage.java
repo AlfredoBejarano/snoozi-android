@@ -3,6 +3,7 @@ package com.alfredobejarano.elgordo.view.pages;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -29,6 +30,7 @@ import java.util.ArrayList;
  */
 public class TextInputPage extends Fragment implements Page {
 
+    private TextView text;
     private EditText input;
     private TextView title;
     private int pageNumber;
@@ -51,6 +53,9 @@ public class TextInputPage extends Fragment implements Page {
         return fragment;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,16 +64,26 @@ public class TextInputPage extends Fragment implements Page {
         foundDogViewPager = foundDogActivity.getViewPager();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_text_input_page, container, false);
+        return inflater.inflate(R.layout.fragment_text_input_page, container, false);
+    }
 
-        input = (EditText) view.findViewById(R.id.found_dog_breed_input);
-        title = (TextView) view.findViewById(R.id.found_dog_breed_title);
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        return view;
+        input = (EditText) getView().findViewById(R.id.found_dog_breed_input);
+        title = (TextView) getView().findViewById(R.id.found_dog_breed_title);
+        text = (TextView) getView().findViewById(R.id.found_dog_description_text);
     }
 
     public void onButtonPressed(Uri uri) {
@@ -105,8 +120,14 @@ public class TextInputPage extends Fragment implements Page {
             case 2:
                 title.setText(getResources().getString(R.string.found_dog_color));
                 break;
+            case 4:
+                Log.d("TODO","TOOOOOOOOOOODO");
+                title.setText(getResources().getString(R.string.found_dog_description_title));
+                text.setVisibility(View.VISIBLE);
+                break;
             default:
                 title.setText("");
+                text.setVisibility(View.GONE);
                 break;
         }
     }

@@ -11,11 +11,21 @@
         android:id="@+id/found_dog_breed_input" />
 
     <TextView
+        android:visibility="gone"
+        style="@style/dogFoundText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:id="@+id/found_dog_description_text"
+        android:text="@string/found_dog_description_text"
+        android:layout_above="@id/found_dog_breed_input"/>
+
+    <TextView
         style="@style/dogFoundTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:id="@+id/found_dog_breed_title"
-        android:layout_above="@id/found_dog_breed_input"/>
+        android:layout_above="@id/found_dog_description_text"/>
 
 </RelativeLayout>
