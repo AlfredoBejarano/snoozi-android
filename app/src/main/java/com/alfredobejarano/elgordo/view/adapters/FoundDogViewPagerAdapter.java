@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.view.ViewGroup;
 
+import com.alfredobejarano.elgordo.view.pages.CalendarPage;
 import com.alfredobejarano.elgordo.view.pages.RadiusOptionPage;
 import com.alfredobejarano.elgordo.view.pages.TextInputPage;
 import com.alfredobejarano.elgordo.view.pages.WelcomePage;
@@ -37,6 +38,7 @@ public class FoundDogViewPagerAdapter extends FragmentPagerAdapter {
         switch(position) {
             case 0: return new WelcomePage();
             case 3: return new RadiusOptionPage();
+            case 6: return new CalendarPage();
             default: return new TextInputPage();
         }
     }

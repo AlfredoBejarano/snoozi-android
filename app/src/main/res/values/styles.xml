@@ -57,6 +57,14 @@
         <item name="android:background">@color/colorTransparent</item>
     </style>
 
+    <!-- Style for CalendarView in the FoundDog Views -->
+    <style name="dogFoundCalendar" parent="android:Widget.CalendarView">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
 </resources>
 
 

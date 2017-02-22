@@ -6,13 +6,14 @@
 
     <EditText
         style="@style/dogInputText"
+        android:inputType="number"
         android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:id="@+id/found_dog_breed_input" />
 
     <TextView
-        android:visibility="gone"
         style="@style/dogFoundText"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="false"

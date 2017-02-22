@@ -10,13 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.alfredobejarano.elgordo.R;
 import com.alfredobejarano.elgordo.view.base.Page;
 import com.alfredobejarano.elgordo.view.dog.FoundDogActivity;
 import com.alfredobejarano.elgordo.view.dog.FoundDogViewPager;
+import com.alfredobejarano.elgordo.view.factory.PagesTextFactory;
 
 import java.util.ArrayList;
 
@@ -35,7 +35,6 @@ public class TextInputPage extends Fragment implements Page {
     private TextView title;
     private int pageNumber;
     private FoundDogActivity foundDogActivity;
-    private FoundDogViewPager foundDogViewPager;
     private OnFragmentInteractionListener mListener;
 
     public TextInputPage() {
@@ -61,7 +60,6 @@ public class TextInputPage extends Fragment implements Page {
         super.onCreate(savedInstanceState);
 
         foundDogActivity = (FoundDogActivity) getActivity();
-        foundDogViewPager = foundDogActivity.getViewPager();
     }
 
     /**
@@ -113,23 +111,11 @@ public class TextInputPage extends Fragment implements Page {
     @Override
     public void setup(int pageNumber) {
         this.pageNumber = pageNumber;
-        switch(pageNumber) {
-            case 1:
-                title.setText(getResources().getText(R.string.found_dog_breed));
-                break;
-            case 2:
-                title.setText(getResources().getString(R.string.found_dog_color));
-                break;
-            case 4:
-                Log.d("TODO","TOOOOOOOOOOODO");
-                title.setText(getResources().getString(R.string.found_dog_description_title));
-                text.setVisibility(View.VISIBLE);
-                break;
-            default:
-                title.setText("");
-                text.setVisibility(View.GONE);
-                break;
-        }
+        int[] settings = new PagesTextFactory().PagesTextSettingsFactory(pageNumber);
+
+        text.setVisibility(settings[1]);
+        input.setInputType(settings[2]);
+        title.setText(getString(settings[0]));
     }
 
     /**

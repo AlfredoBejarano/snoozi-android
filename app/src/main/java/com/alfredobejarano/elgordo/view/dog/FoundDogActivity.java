@@ -12,6 +12,7 @@ import com.alfredobejarano.elgordo.view.adapters.FoundDogViewPagerAdapter;
 import com.alfredobejarano.elgordo.view.base.View;
 import com.alfredobejarano.elgordo.view.listeners.FoundDogNextButtonClickListener;
 import com.alfredobejarano.elgordo.view.listeners.ViewPagerChangeListener;
+import com.alfredobejarano.elgordo.view.pages.CalendarPage;
 import com.alfredobejarano.elgordo.view.pages.RadiusOptionPage;
 import com.alfredobejarano.elgordo.view.pages.TextInputPage;
 import com.alfredobejarano.elgordo.view.pages.WelcomePage;
@@ -21,7 +22,7 @@ import java.util.ArrayList;
 
 public class FoundDogActivity extends AppCompatActivity
         implements View, WelcomePage.OnFragmentInteractionListener, TextInputPage.OnFragmentInteractionListener,
-        RadiusOptionPage.OnFragmentInteractionListener {
+        RadiusOptionPage.OnFragmentInteractionListener, CalendarPage.OnFragmentInteractionListener {
 
     private ArrayList params;
     private Button nextButton;

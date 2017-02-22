@@ -16,7 +16,6 @@ import com.alfredobejarano.elgordo.view.base.Page;
  * Activities that contain this fragment must implement the
  * {@link WelcomePage.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * create an instance of this fragment.
  */
 public class WelcomePage extends Fragment implements Page{
     private OnFragmentInteractionListener mListener;

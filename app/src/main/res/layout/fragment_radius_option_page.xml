@@ -37,7 +37,7 @@
         style="@style/dogFoundTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/found_dog_gender"
+        android:text="@string/found_dog_gender_question"
         android:id="@+id/found_dog_gender_title"
         android:layout_above="@id/found_dog_gender_input"/>
 </RelativeLayout>

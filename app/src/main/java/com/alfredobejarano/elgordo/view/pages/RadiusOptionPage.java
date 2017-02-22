@@ -25,8 +25,6 @@ import java.util.ArrayList;
  * Activities that contain this fragment must implement the
  * {@link RadiusOptionPage.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link RadiusOptionPage#newInstance} factory method to
- * create an instance of this fragment.
  */
 public class RadiusOptionPage extends Fragment implements Page {
     private int pageNumber;
@@ -36,20 +34,8 @@ public class RadiusOptionPage extends Fragment implements Page {
     private FoundDogViewPager foundDogViewPager;
     private OnFragmentInteractionListener mListener;
 
-    public RadiusOptionPage() {
-        // Required empty public constructor
-    }
+    public RadiusOptionPage() { /* auto-generated code */ }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @return A new instance of fragment RadiusOptionPage.
-     */
-    public static RadiusOptionPage newInstance() {
-        RadiusOptionPage fragment = new RadiusOptionPage();
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

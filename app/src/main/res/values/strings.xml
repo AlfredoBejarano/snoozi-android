@@ -10,39 +10,22 @@
     <string name="report_dog_text">Reportar publicación</string>
 
     <!--Found Dog flow String resources -->
-    <string name="dog_found_title_welcome">¿Has encontrado un perrito?</string>
-    <string name="dog_found_text_welcome">Vamos a preguntarte algunos detalles para que sea más fácil que lo encuentren..</string>
-    <string name="next">Siguiente</string>
-    <string name="ready">Listo</string>
-    <string name="breed_color_question">¿Cuál crees que sea su raza?</string>
-    <string name="fur_color_question">¿De qué color es su pelo?</string>
-    <string name="gender_question">¿Es macho o hembra?</string>
-    <string name="found_location_question">¿En dónde lo encontraste?</string>
-    <string name="found_date_question">¿Cuándo lo encontraste?</string>
-    <string name="phone_number_question">¿Cuál es tu número teléfonico?</string>
-    <string name="description_question">¿Qué más puedes decirnos del perrito?</string>
-    <string name="photo_question">Escoge una foto del perrito</string>
-
     <string name="male">Macho</string>
+    <string name="ready">Listo</string>
     <string name="female">Hembra</string>
-    <string name="found_dog_breed">¿Cuál es la raza del perro?</string>
-    <string name="found_dog_color">¿De qué color es su pelo?</string>
-    <string name="found_dog_gender">¿Qué género es el perro?</string>
-
-    <string name="found_dog_description_title">Cuentanos mas sobre el perro</string>
+    <string name="next">Siguiente</string>
+    <string name="dog_found_title_welcome">¿Has encontrado un perrito?</string>
+    <string name="dog_found_text_welcome">Vamos a preguntarte algunos detalles para que sea más fácil que lo encuentren.</string>
+    <string name="found_dog_breed_question">¿Cuál crees que sea su raza?</string>
+    <string name="found_dog_color_question">¿De qué color es su pelo?</string>
+    <string name="found_dog_gender_question">¿Es macho o hembra?</string>
+    <string name="found_dog_description_question">¿Qué más puedes decirnos del perrito?</string>
     <string name="found_dog_description_text">¿Traia un collar?, ¿Alguna herida o marca?, ¿Que otros detalles puedes contarnos sobre el perro?</string>
-
-
+    <string name="found_dog_phone_question">¿Cuál es tu número teléfonico?</string>
+    <string name="found_dog_photo_question">Escoge una foto del perrito</string>
+    <string name="found_dog_location_question">¿En dónde lo encontraste?</string>
+    <string name="found_dog_date_question">¿Cuándo lo encontraste?</string>
     <string name="dog_found_location_title">¿Donde encontraste al perro?</string>
-    <string name="dog_found_location_button_text">Usar mi Ubicacion</string>
-    <string name="title_activity_maps">Map</string>
-
-    <string name="found_dog_last_know_location">Tu ultima ubicacion</string>
-    <string name="found_dog_last_know_location_description">Esta es la ultima ubicacion almacenada por tu dispositivo.</string>
-    <string name="found_dog_current_location">Tu ubicacion actual</string>
-    <string name="found_dog_current_location_description">Esta es tu ubicacion actual.</string>
-    <string name="found_dog_error_address">No pudimos encontrar la direccion</string>
-
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -8,24 +8,22 @@
     <string name="view_dog_location_time">I been founded at %1$s , %2$s.</string>
     <string name="view_dog_page_question">Can you recognize me? Who found me let a telephone number</string>
     <string name="report_dog_text">Report listing</string>
+
+    <!--Found Dog flow String resources -->
+    <string name="male">Macho</string>
+    <string name="ready">OK</string>
+    <string name="female">Hembra</string>
+    <string name="next">Next</string>
     <string name="dog_found_title_welcome">Seems like you found a dog</string>
     <string name="dog_found_text_welcome">We are going to make you a few questions about him, please be very descriptive when answering them.</string>
-    <string name="next">Next</string>
-    <string name="ready">OK</string>
-
-    <string name="male">Male</string>
-    <string name="female">Female</string>
-    <string name="found_dog_breed">What breed is the dog?</string>
-    <string name="found_dog_color">What color is it fur?</string>
-    <string name="found_dog_gender">Which gender the dog is?</string>
-    <string name="dog_found_location_title">Where did you found the dog?</string>
-    <string name="dog_found_location_button_text">Use my location</string>
-
-    <string name="found_dog_last_know_location">Your last know location</string>
-    <string name="found_dog_last_know_location_description">This is the last location stored in your device.</string>
-    <string name="found_dog_current_location">Your current location</string>
-    <string name="found_dog_current_location_description">This is your current location.</string>
-
-    <string name="found_dog_description_title">Cuentanos mas sobre el perro</string>
-    <string name="found_dog_description_text">It had a collar? a wound or a mark? What other details can you describe about the dog?</string>
+    <string name="found_dog_breed_question">¿Cuál crees que sea su raza?</string>
+    <string name="found_dog_color_question">¿De qué color es su pelo?</string>
+    <string name="found_dog_gender_question">¿Es macho o hembra?</string>
+    <string name="found_dog_description_question">¿Qué más puedes decirnos del perrito?</string>
+    <string name="found_dog_description_text">¿Traia un collar?, ¿Alguna herida o marca?, ¿Que otros detalles puedes contarnos sobre el perro?</string>
+    <string name="found_dog_phone_question">¿Cuál es tu número teléfonico?</string>
+    <string name="found_dog_photo_question">Escoge una foto del perrito</string>
+    <string name="found_dog_location_question">¿En dónde lo encontraste?</string>
+    <string name="found_dog_date_question">¿Cuándo lo encontraste?</string>
+    <string name="dog_found_location_title">¿Donde encontraste al perro?</string>
 </resources>
