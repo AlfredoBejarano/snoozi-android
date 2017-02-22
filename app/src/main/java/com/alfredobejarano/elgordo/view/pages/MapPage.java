@@ -216,10 +216,10 @@ public class MapPage extends Fragment implements Page, OnMapReadyCallback, Locat
             ArrayList params = foundDogActivity.getParams();
             if(params.size() >= pageNumber){
                 params.remove(pageNumber-1);
-                params.add(pageNumber-1, getLocationFromAddress());
+                params.add(pageNumber-1, getLocationAdress(getLocationFromAddress()));
                 foundDogActivity.setParams(params);
             } else {
-                params.add(getLocationFromAddress());
+                params.add(getLocationAdress(getLocationFromAddress()));
                 foundDogActivity.setParams(params);
             }
         }

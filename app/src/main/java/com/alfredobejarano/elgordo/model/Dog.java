@@ -2,6 +2,8 @@ package com.alfredobejarano.elgordo.model;
 
 import android.graphics.Bitmap;
 
+import retrofit2.http.POST;
+
 /**
  * Created by jacorona on 6/1/16.
  */
@@ -218,4 +220,6 @@ public class Dog {
     public void setDownloadedImage(Bitmap downloadedImage) {
         this.downloadedImage = downloadedImage;
     }
+
+
 }

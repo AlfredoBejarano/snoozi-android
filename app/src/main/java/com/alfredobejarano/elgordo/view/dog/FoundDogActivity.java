@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.alfredobejarano.elgordo.R;
+import com.alfredobejarano.elgordo.presenter.FoundDogPresenter;
 import com.alfredobejarano.elgordo.view.adapters.FoundDogViewPagerAdapter;
 import com.alfredobejarano.elgordo.view.base.View;
 import com.alfredobejarano.elgordo.view.listeners.FoundDogNextButtonClickListener;
@@ -34,7 +35,7 @@ public class FoundDogActivity extends AppCompatActivity
     private FoundDogViewPagerAdapter foundDogViewPagerAdapter;
 
     public ArrayList getParams() { return params; }
-    public void setParams(ArrayList params) { this.params = params; Log.d("TODO", String.valueOf(params));}
+    public void setParams(ArrayList params) { this.params = params; }
     public FoundDogViewPager getViewPager() { return viewPager;}
 
     /**
@@ -61,6 +62,8 @@ public class FoundDogActivity extends AppCompatActivity
         nextButton = (Button) findViewById(R.id.found_dog_flow_next_button);
         nextButton.setOnClickListener(new FoundDogNextButtonClickListener(viewPager, nextButton, this));
 
+
+
     }
 
     /**
@@ -79,6 +82,14 @@ public class FoundDogActivity extends AppCompatActivity
                 super.onBackPressed();
             }
         }
+    }
+
+    public void uploadDog() {
+        ArrayList<Object> presenterParams = new ArrayList<>();
+        presenterParams.add(this);
+        presenterParams.add(this.params);
+
+        new FoundDogPresenter().attachView(presenterParams);
     }
 
     /**

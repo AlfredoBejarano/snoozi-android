@@ -3,7 +3,6 @@ package com.alfredobejarano.elgordo.view.pages;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,9 +12,6 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AlertDialog;
-import android.text.Layout;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,7 +19,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.alfredobejarano.elgordo.R;
@@ -41,6 +36,8 @@ import java.util.ArrayList;
  * to handle interaction events.
  */
 public class WidgetPage extends Fragment implements Page {
+
+    private static final String BASE64_HEADER = "data:image/jpeg;base64,";
 
     private int pageNumber;
     private TextView title;
@@ -138,10 +135,11 @@ public class WidgetPage extends Fragment implements Page {
     @Override
     public void sendToActivity() {
         String data;
-        if(pageNumber < 7) {
+        if (pageNumber < 7) {
             data = getDateFromDatePicker();
         } else {
-            data = b64Image;
+            data = BASE64_HEADER + b64Image;
+            Log.d("RIZEN", data);
         }
 
         ArrayList params = foundDogActivity.getParams();
@@ -163,9 +161,9 @@ public class WidgetPage extends Fragment implements Page {
         super.onActivityResult(requestCode, resultCode, data);
         BitmapDrawable photo;
 
-        if(resultCode == Activity.RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) {
             Uri selectedImage = data.getData();
-            String[] filePathColumn = { MediaStore.Images.Media.DATA };
+            String[] filePathColumn = {MediaStore.Images.Media.DATA};
 
             Cursor cursor = getActivity().getContentResolver().query(selectedImage, filePathColumn, null, null, null);
             cursor.moveToFirst();
@@ -173,14 +171,7 @@ public class WidgetPage extends Fragment implements Page {
             final String picturePath = cursor.getString(columnIndex);
             cursor.close();
 
-            //b64Image = encodePhoto(BitmapFactory.decodeFile(picturePath));
-
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    b64Image = encodePhoto(BitmapFactory.decodeFile(picturePath));
-                }
-            }).start();
+            b64Image = encodePhoto(BitmapFactory.decodeFile(picturePath));
 
             photo = new BitmapDrawable(getResources(), BitmapFactory.decodeFile(picturePath));
             addPhotoButton.setBackground(photo);
@@ -192,11 +183,11 @@ public class WidgetPage extends Fragment implements Page {
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
         byte[] byteArray = byteArrayOutputStream.toByteArray();
 
-        return Base64.encodeToString(byteArray, Base64.URL_SAFE);
+        return Base64.encodeToString(byteArray, Base64.DEFAULT);
     }
 
     private Bitmap decodePhoto(String b64Image) {
-        byte[] decodedString = Base64.decode(b64Image, Base64.URL_SAFE);
+        byte[] decodedString = Base64.decode(b64Image, Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
     }
 

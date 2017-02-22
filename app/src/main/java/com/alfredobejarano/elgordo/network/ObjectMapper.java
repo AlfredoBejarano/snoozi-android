@@ -1,8 +1,13 @@
 package com.alfredobejarano.elgordo.network;
 
 
+import android.util.Log;
+
 import com.alfredobejarano.elgordo.model.Dog;
+import com.alfredobejarano.elgordo.model.DogUploadPOJO;
 import com.alfredobejarano.elgordo.presenter.base.Presenter;
+
+import org.json.JSONObject;
 
 import java.util.List;
 
@@ -87,23 +92,26 @@ public class ObjectMapper {
      * @param presenter the presenter for the desired view
      * @param body      the Dog object to be parsed and send to the API
      */
-    public ObjectMapper(final Presenter presenter, final Dog body) {
+    public ObjectMapper(final Presenter presenter, final DogUploadPOJO body) {
         Retrofit httpRestClient = new Retrofit.Builder()
                 .baseUrl(NetworkUtils.API_BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         DogInterface dogInterface = httpRestClient.create(DogInterface.class);
-        Call<Dog> apiCall = dogInterface.createDog(body);
 
-        apiCall.enqueue(new Callback<Dog>() {
+
+        Call<DogUploadPOJO> apiCall = dogInterface.createDog(body);
+
+
+        apiCall.enqueue(new Callback<DogUploadPOJO>() {
             @Override
-            public void onResponse(Call<Dog> call, Response<Dog> response) {
+            public void onResponse(Call<DogUploadPOJO> call, Response<DogUploadPOJO> response) {
                 presenter.onResponse(response.body());
             }
 
             @Override
-            public void onFailure(Call<Dog> call, Throwable t) {
+            public void onFailure(Call<DogUploadPOJO> call, Throwable t) {
                 presenter.onError(t);
             }
         });

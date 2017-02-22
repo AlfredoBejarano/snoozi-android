@@ -1,6 +1,9 @@
 package com.alfredobejarano.elgordo.network;
 
 import com.alfredobejarano.elgordo.model.Dog;
+import com.alfredobejarano.elgordo.model.DogUploadPOJO;
+
+import org.json.JSONObject;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -16,6 +19,6 @@ public interface DogInterface {
     Call<Dog> getDog(@Path("dog_id") int dog_id);
 
     @POST("/dogs")
-    Call<Dog> createDog(@Body Dog dog);
+    Call<DogUploadPOJO> createDog(@Body DogUploadPOJO dog);
 }
 
