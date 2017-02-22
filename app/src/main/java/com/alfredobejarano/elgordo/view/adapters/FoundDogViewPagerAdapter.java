@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.view.ViewGroup;
 
+import com.alfredobejarano.elgordo.view.pages.MapPage;
 import com.alfredobejarano.elgordo.view.pages.WidgetPage;
 import com.alfredobejarano.elgordo.view.pages.RadiusOptionPage;
 import com.alfredobejarano.elgordo.view.pages.TextInputPage;
@@ -35,12 +36,16 @@ public class FoundDogViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        switch(position) {
-            case 0: return new WelcomePage();
-            case 3: return new RadiusOptionPage();
-            case 6: return new WidgetPage();
-            case 7: return new WidgetPage();
-            default: return new TextInputPage();
+        if(position == 0) {
+            return new WelcomePage();
+        } else if(position == 3) {
+            return new RadiusOptionPage();
+        } else if(position == 6 || position == 8) {
+            return new WidgetPage();
+        } else if(position == 7) {
+            return new MapPage();
+        } else {
+            return new TextInputPage();
         }
     }
 

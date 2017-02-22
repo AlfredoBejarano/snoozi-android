@@ -33,6 +33,7 @@ public class FoundDogNextButtonClickListener implements View.OnClickListener {
 
         if(currentItem == pages) {
             Log.d("TODO", "Dod upload goes here!");
+            currentPage.sendToActivity();
         } else if(currentItem == pages - 1) {
             button.setText(context.getResources().getText(R.string.ready));
             currentPage.sendToActivity();
