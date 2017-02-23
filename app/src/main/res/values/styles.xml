@@ -20,7 +20,8 @@
     <!-- Style for Textviews text AddFounDog activity -->
     <style name="dogFoundText" parent="@style/dogFoundTitle">
         <item name="android:textSize">16sp</item>
-        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
     </style>
 
     <!-- Style for next DogFoundFlow button AddFounDog activity -->
@@ -44,8 +45,6 @@
     <style name="dogInputText" parent="@style/Widget.AppCompat.EditText">
         <item name="android:textSize">28dp</item>
         <item name="android:textColor">@color/colorWhite</item>
-        <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:layout_alignParentBottom">true</item>
         <item name="android:maxLines">1</item>
         <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">viewStart</item>
     </style>
@@ -64,6 +63,15 @@
         <item name="colorAccent">@color/colorAccent</item>
 
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
 

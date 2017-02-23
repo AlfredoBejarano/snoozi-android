@@ -5,7 +5,7 @@
  * {@link http://www.androidhive.info/2012/07/android-gps-location-manager-tutorial/}
  */
 
-package com.alfredobejarano.elgordo.view.utils;
+package com.alfredobejarano.elgordo.utils;
 
 import android.app.AlertDialog;
 import android.app.Service;
@@ -18,7 +18,6 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
-import android.util.Log;
 
 public class GPSTracker extends Service implements LocationListener {
 

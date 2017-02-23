@@ -1,14 +1,13 @@
 package com.alfredobejarano.elgordo.presenter;
 
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.alfredobejarano.elgordo.model.Dog;
-import com.alfredobejarano.elgordo.model.DogUploadPOJO;
-import com.alfredobejarano.elgordo.network.ObjectMapper;
 import com.alfredobejarano.elgordo.presenter.base.Presenter;
 import com.alfredobejarano.elgordo.view.base.View;
-
-import org.json.JSONObject;
+import com.alfredobejarano.elgordo.view.dog.FoundDogActivity;
 
 import java.util.List;
 
@@ -40,11 +39,22 @@ public class FoundDogPresenter implements Presenter {
     @Override
     public void attachView(List<Object> params) {
         setView((View) params.get(0));
-        List<Object> dog = (List<Object>) params.get(1);
 
+        AppCompatActivity appCompatActivity = ((AppCompatActivity) getView());
 
+        Dog dog = buildDog((List) params.get(1));
 
-        ObjectMapper mapper = new ObjectMapper(this, new DogUploadPOJO(buildDog((List<Object>) params.get(1))));
+        Intent intent = new Intent(appCompatActivity, FoundDogActivity.class);
+        intent.putExtra("breed", dog.getBreed());
+        intent.putExtra("color", dog.getColor());
+        intent.putExtra("gender", dog.isGender());
+        intent.putExtra("description", dog.getDescription());
+        intent.putExtra("number", dog.getNumber());
+        intent.putExtra("found_date", dog.getFound_date());
+        intent.putExtra("found_location", dog.getFound_location());
+        intent.putExtra("image", dog.getImage());
+
+        ((AppCompatActivity) getView()).startActivity(intent);
     }
 
     private Dog buildDog(List<Object> params) {

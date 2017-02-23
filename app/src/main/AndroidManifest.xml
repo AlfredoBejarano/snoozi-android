@@ -31,9 +31,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.dog.ViewDogActivity" />
-        <activity
-            android:name=".view.dog.FoundDogActivity"
-            android:screenOrientation="portrait"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -46,6 +43,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity android:name=".view.dog.FoundDogActivity"></activity>
     </application>
 
 </manifest>

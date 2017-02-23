@@ -2,7 +2,6 @@ package com.alfredobejarano.elgordo.view.factory;
 
 import android.view.View;
 import com.alfredobejarano.elgordo.R;
-import com.alfredobejarano.elgordo.view.pages.WidgetPage;
 
 /**
  * Created by Alfredo on 21/02/2017.

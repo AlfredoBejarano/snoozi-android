@@ -19,7 +19,7 @@
     <string name="found_dog_breed_question">¿Cuál crees que sea su raza?</string>
     <string name="found_dog_color_question">¿De qué color es su pelo?</string>
     <string name="found_dog_gender_question">¿Es macho o hembra?</string>
-    <string name="found_dog_description_question">¿Qué más puedes decirnos del perrito?</string>
+    <string name="found_dog_description_question">¿Algun otro detalle sobre el perro?</string>
     <string name="found_dog_description_text">¿Traia un collar?, ¿Alguna herida o marca?, ¿Que otros detalles puedes contarnos sobre el perro?</string>
     <string name="found_dog_phone_question">¿Cuál es tu número teléfonico?</string>
     <string name="found_dog_photo_question">Escoge una foto del perrito</string>
@@ -29,5 +29,6 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_verify_found_dog">VerifyFoundDogActivity</string>
 
 </resources>

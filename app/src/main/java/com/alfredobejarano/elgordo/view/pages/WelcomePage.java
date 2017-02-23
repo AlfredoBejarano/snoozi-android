@@ -58,7 +58,9 @@ public class WelcomePage extends Fragment implements Page{
     }
 
     @Override
-    public void setup(int pageNumber) { /* auto-generated code */ }
+    public void setup(int pageNumber) {
+        /* auto-generated code */
+    }
 
     @Override
     public void sendToActivity() { /* This method does nothing in this page */ }
