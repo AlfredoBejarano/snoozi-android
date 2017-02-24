@@ -24,11 +24,9 @@
     <string name="found_dog_phone_question">¿Cuál es tu número teléfonico?</string>
     <string name="found_dog_photo_question">Escoge una foto del perrito</string>
     <string name="found_dog_location_question">¿En dónde lo encontraste?</string>
-    <string name="found_dog_date_question">¿Cuándo lo encontraste?</string>
-    <string name="dog_found_location_title">¿Donde encontraste al perro?</string>
+    <string name="found_dog_date_question">¿Cuándo encontraste al perro?</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_verify_found_dog">VerifyFoundDogActivity</string>
+    <string name="your_location">Tu ubicacion</string>
+    <string name="location_not_found">No se pudo encontrar esa ubicacion</string>
 
 </resources>

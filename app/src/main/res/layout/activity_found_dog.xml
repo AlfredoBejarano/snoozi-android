@@ -110,15 +110,19 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/found_dog_location_title"
                 android:background="@drawable/photo_border"
-                android:text="@string/dog_found_location_title"
+                android:text="@string/found_dog_location_question"
                 android:layout_below="@id/found_dog_gender_input"
                 android:layout_margin="@dimen/activity_vertical_margin" />
 
-            <com.google.android.gms.maps.MapView
+            <fragment
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:layout_height="256dp"
                 android:layout_width="match_parent"
-                android:id="@+id/found_dog_map_view"
-                android:layout_below="@id/found_dog_location_title" />
+                android:id="@+id/found_dog_map"
+                tools:context=".view.dog.FoundDogActivity"
+                android:layout_below="@id/found_dog_location_title"
+                android:name="com.google.android.gms.maps.SupportMapFragment" />
 
             <TextView
                 android:padding="4dp"
@@ -126,9 +130,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/found_dog_date_title"
+                android:layout_below="@id/found_dog_map"
                 android:background="@drawable/photo_border"
-                android:layout_below="@id/found_dog_map_view"
-                android:text="@string/dog_found_location_title"
+                android:text="@string/found_dog_date_question"
                 android:layout_margin="@dimen/activity_vertical_margin" />
 
             <DatePicker
