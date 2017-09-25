@@ -16,16 +16,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".home.view.HomeActivity">
+        <activity
+            android:name=".home.view.HomeActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".adddog.view.AddDogActivity">
+        <activity
+            android:name=".adddog.view.AddDogActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".viewdog.view.ViewDogActivity">
+        <activity
+            android:name=".viewdog.view.ViewDogActivity"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

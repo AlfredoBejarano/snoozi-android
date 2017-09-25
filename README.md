@@ -40,4 +40,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-Hecho con 💓 por @AlfredoBejarano 
+Hecho con 💓 por @AlfredoBejarano
+ 
+![kiss](https://github.com/AlfredoBejarano/snoozi-android/blob/master/app/src/main/res/drawable/back_layer.jpg)
