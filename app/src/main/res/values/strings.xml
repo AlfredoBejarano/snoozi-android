@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Snoozi 🐶</string>
+    <string name="app_name">🐶 Snoozi</string>
 
     <!-- HTTP ERRORS -->
     <string name="error_bad_request">La petición es inválida (400)</string>
