@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Snoozi 🐶</string>
+
+    <!-- HTTP ERRORS -->
+    <string name="error_bad_request">La petición es inválida (400)</string>
+    <string name="error_unauthorized">Se requiere autenticación para acceder al recurso (401).</string>
+    <string name="error_payment_required">Se requiere pago adicional por parte de Urbvan (402).</string>
+    <string name="error_forbidden">No tienes acceso al recurso solicitado (403).</string>
+    <string name="error_not_found">El recurso no fue encontrado (404).</string>
+    <string name="error_method_not_allowed">Se utilizó un metodo incorrecto para realizar la petición (405).</string>
+    <string name="error_not_acceptable">La respuesta no es aceptable (406).</string>
+    <string name="error_proxy_authentication">Se requiere un proxy para acceder al recurso (407).</string>
+    <string name="error_request_timeout">Se agotó el tiempo de espera por parte del servidor (408).</string>
+    <string name="error_conflict">Existe un conflicto en la petición (409).</string>
+    <string name="error_gone">El recurso no está, ni estará disponible (410).</string>
+    <string name="error_length_required">Se requiere la longitud de la petición (411).</string>
+    <string name="error_precondition_failed">El servidor no cumple con las condiciones de la petición (412).</string>
+    <string name="error_payload_too_large">La petición es muy grande (413).</string>
+    <string name="error_uri_too_long">La URI de la petición es muy larga (414).</string>
+    <string name="error_unsupported_media_type">El tipo de archivo no está soportado por el servidor (415).</string>
+    <string name="error_internal_error">Ocurrió un problema con el servidor (500).</string>
+    <string name="error_not_implemented">El servidor no reconoze el método utilizado en la petición (501).</string>
+    <string name="error_bad_gateway">Se recibió una respuesta inválida desde el servidor remoto al servidor (502).</string>
+    <string name="error_service_unavailable">El servidor no esta disponible, intente más tarde nuevamente (503).</string>
+    <string name="error_gateway_timeout">No se recibió una respuesta desde el servidor remoto al servidor (504).</string>
+    <string name="error_http_version_not_supported">El servidor no soporta la versión del protocolo HTTP utilizada en la petición (505).</string>
+    <string name="loading">Cargando</string>
+
+    <!-- App Resources -->
+    <string name="dogs_list_empty">No hay perros perdidos :)</string>
+    <string name="breed_hint">Raza</string>
+    <string name="color_hint">Color de pelo</string>
+    <string name="dog_description_hint">¿Que puedes decirnos del perro?</string>
+    <string name="phone_hint">Tu número de teléfono</string>
+    <string name="place_hint">¿Dónde lo encontraste?</string>
+    <string name="add_dog_button">Agregar Perro</string>
+    <string name="add_dog_title">¡Encontré un perro!</string>
+    <string name="date_hint">¿Cuándo lo encontraste?</string>
+    <string name="permission_camera">Requerimos permisos para tomar fotos</string>
+    <string name="permission_storage">Requerimos permisos para guardar fotos</string>
+    <string name="select_picture_source">Escoge de donde tomaremos la foto del perro</string>
+    <string name="missing_permissions">Sin tu permiso, no podremos tomar ni ver fotos</string>
+    <string name="call_phone">Necesitamos permiso para hacer la llamada</string>
+    <string name="no_map_app_found">No tienes ninguna app para ver mapas!</string>
+</resources>

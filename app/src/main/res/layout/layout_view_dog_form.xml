@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_dog_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/view_dog_photo_expanded"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:background="#000"
+        android:elevation="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_photo_placeholder"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/view_dog_photo"
+        android:layout_width="@dimen/view_photo_size"
+        android:layout_height="@dimen/view_photo_size"
+        android:layout_margin="@dimen/margin_default"
+        android:adjustViewBounds="true"
+        android:elevation="@dimen/cardview_default_elevation"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_photo_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/view_dog_breed"
+        style="@style/add_dog_field"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toStartOf="@+id/view_dog_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_dog_photo"
+        tools:ignore="MissingPrefix"/>
+
+    <TextView
+        android:id="@+id/view_dog_color"
+        style="@style/add_dog_field"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view_dog_breed"
+        app:layout_constraintTop_toBottomOf="@+id/view_dog_photo"
+        tools:ignore="MissingPrefix"/>
+
+    <TextView
+        android:id="@+id/view_dog_description"
+        style="@style/add_dog_field"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:maxLines="5"
+        app:layout_constraintBottom_toTopOf="@+id/view_dog_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_dog_breed"/>
+
+    <TextView
+        android:id="@+id/view_dog_number"
+        style="@style/add_dog_field"
+        android:drawableStart="@drawable/ic_call"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/view_dog_place"
+        app:layout_constraintEnd_toStartOf="@+id/view_dog_date"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingPrefix"/>
+
+    <TextView
+        android:id="@+id/view_dog_date"
+        style="@style/add_dog_field"
+        app:layout_constraintBottom_toTopOf="@+id/view_dog_place"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view_dog_number"
+        />
+
+    <TextView
+        android:id="@+id/view_dog_place"
+        style="@style/add_dog_field"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_map"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingPrefix"/>
+
+</android.support.constraint.ConstraintLayout>
