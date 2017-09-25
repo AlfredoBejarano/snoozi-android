@@ -27,7 +27,7 @@
     <string name="loading">Cargando</string>
 
     <!-- App Resources -->
-    <string name="dogs_list_empty">No hay perros perdidos :)</string>
+    <string name="dogs_list_empty">No hay perros perdidos 😊</string>
     <string name="breed_hint">Raza</string>
     <string name="color_hint">Color de pelo</string>
     <string name="dog_description_hint">¿Que puedes decirnos del perro?</string>
@@ -36,10 +36,10 @@
     <string name="add_dog_button">Agregar Perro</string>
     <string name="add_dog_title">¡Encontré un perro!</string>
     <string name="date_hint">¿Cuándo lo encontraste?</string>
-    <string name="permission_camera">Requerimos permisos para tomar fotos</string>
-    <string name="permission_storage">Requerimos permisos para guardar fotos</string>
-    <string name="select_picture_source">Escoge de donde tomaremos la foto del perro</string>
-    <string name="missing_permissions">Sin tu permiso, no podremos tomar ni ver fotos</string>
-    <string name="call_phone">Necesitamos permiso para hacer la llamada</string>
-    <string name="no_map_app_found">No tienes ninguna app para ver mapas!</string>
+    <string name="permission_camera">Requerimos permisos para tomar fotos 📸</string>
+    <string name="permission_storage">Requerimos permisos para ver tus fotos 💾</string>
+    <string name="select_picture_source">Escoge de donde tomaremos la foto del perro 🐶</string>
+    <string name="missing_permissions">Sin tu permiso, no podremos tomar ni ver fotos 😞</string>
+    <string name="call_phone">¡Necesitamos permiso para hacer llamadas! 😯</string>
+    <string name="no_map_app_found">¡No tienes ninguna app para ver mapas! 😯</string>
 </resources>
