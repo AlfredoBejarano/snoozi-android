@@ -1,4 +1,6 @@
 # Snoozi 🐶
+![version_badge](https://img.shields.io/badge/Google%20Play%20Store%20Version-1.0-green.svg)
+
 Snoozi es una app que ayuda a los perros perdidos a volver a su hogar.
 
 Si encuentras un perro pérdido,  puedes subirlo a la base de datos para que su dueño lo busque.
