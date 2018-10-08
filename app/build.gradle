@@ -45,4 +45,5 @@ dependencies {
     // Navigation
     implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha06'
     implementation 'android.arch.navigation:navigation-ui:1.0.0-alpha06'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 }
