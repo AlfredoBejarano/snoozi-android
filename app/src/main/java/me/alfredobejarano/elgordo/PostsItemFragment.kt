@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 /**
@@ -49,7 +49,7 @@ class PostsItemFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?) = RecyclerView(requireContext())
             .apply {
-                this.layoutManager = LinearLayoutManager(this.context)
+                this.layoutManager = GridLayoutManager(this.context, 2)
             }
 
 
